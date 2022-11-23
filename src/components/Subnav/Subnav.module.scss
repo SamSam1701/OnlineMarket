@@ -1,0 +1,55 @@
+.maintop {
+    background: #000000;
+    padding: 10px 0px;
+}
+
+.containerFluid {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.rightInfoBox {
+    float: left;
+    padding-left: 10px;
+    // margin-right: 10px;
+    p {
+        padding: 0px 20px;
+        padding-left: 10px;
+        display: inline;
+        margin: 0px;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 30px;
+    }
+}
+
+.loginBox {
+    float: right;
+    padding-right: 10px;
+}
+
+// .our-link {
+//     float: left;
+//     ul {
+//         line-height: 30px;
+//         li {
+//             display: inline-block;
+//             border-right: 1px solid #ffffff;
+//             padding: 0px 10px;
+//             line-height: 14px;
+//             a {
+//                 color: #ffffff;
+//                 font-weight: 700;
+//                 text-transform: uppercase;
+//                 font-size: 14px;
+//                  :hover {
+//                     color: #b0b435;
+//                 }
+//             }
+//              :last-child {
+//                 border: none;
+//             }
+//         }
+//     }
+// }
