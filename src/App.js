@@ -2,6 +2,7 @@ import {Navigate, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Login from './pages/Login/Login';
 import Home from './pages/home/Home';
+import Shop from './pages/Shop/Shop';
 
 function App() {
 
@@ -37,6 +38,10 @@ function App() {
     {
       path: "/login",
       element: <Login />,
+    },
+    {
+      path: "/shop",
+      element: <Shop />,
     },
     // {
     //   path: "/register",

@@ -1,0 +1,73 @@
+.slide {
+    position: relative;
+    .slideItems {}
+    .ControlSlide {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px;
+        .left {
+            color: #fff;
+            font-size: 20px;
+            background: #b0b435;
+            height: 50px;
+            width: 50px;
+        }
+        .right {
+            color: #fff;
+            font-size: 20px;
+            background: #b0b435;
+            height: 50px;
+            width: 50px;
+            float: right;
+        }
+    }
+    .overlayBackground {
+        background: #333;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0.5;
+    }
+    .container {
+        position: absolute;
+        padding-top: 0;
+        top: 30%;
+        left: 50%;
+        transform: translateY(-70%);
+        transform: translateX(-50%);
+        text-align: center;
+        color: #fff;
+        z-index: 9;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        h1 {
+            font-weight: bolder;
+            font-size: 64px;
+            letter-spacing: 0;
+        }
+        p {
+            font-size: 18px;
+            color: #fff;
+            padding-bottom: 30px;
+        }
+        .Shopbtn {
+            background: #b0b435;
+            font-weight: 400;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            color: #fff;
+            font-size: 24px;
+            border: none;
+            text-transform: uppercase;
+            padding: 10px 20px;
+             :hover {
+                background: #000;
+            }
+        }
+    }
+}
