@@ -51,10 +51,9 @@ function Slide() {
             alt=""
           />
         </div>
-      </Carousel>
 
+      </Carousel>
       <div className={styles.overlayBackground}>
-      
       </div>
 
       <div className={styles.container}>
@@ -69,11 +68,13 @@ function Slide() {
               See how your users experience your website in realtime or view{" "}
               <br /> trends to see any changes in performance over time.
             </p>
-            <p>
-            <Link className={styles.Shopbtn} to="/Shop">
-              Shop New
-           </Link>
-            </p>
+
+            <div className={styles.Shopbtn}>
+                <Link style={{color:'white'}} to="/Shop">
+                  Shop New
+                           </Link>
+            </div>
+
           </div>
         </div>
       </div>

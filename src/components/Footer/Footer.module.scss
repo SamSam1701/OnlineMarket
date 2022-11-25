@@ -1,0 +1,223 @@
+    .footerMain {
+        padding: 70px 0px;
+        background: #010101;
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            @media (min-width: 1200px) {
+                max-width: 1140px;
+            }
+            .footerTopBox {
+                h3 {
+                    color: #ffffff;
+                    position: relative;
+                    font-size: 20px;
+                    padding: 0 0 10px 0;
+                }
+                h3::before {
+                    border-bottom: 2px solid #b0b435;
+                    content: "";
+                    height: 3px;
+                    width: 50%;
+                    position: absolute;
+                    bottom: 3px;
+                    left: 0px;
+                }
+                input {
+                    height: 40px;
+                    border: none;
+                    overflow: visible;
+                    border-radius: 0;
+                    background: #fff;
+                    padding: 0 20px;
+                    width: 100%;
+                }
+                color: #fff;
+                padding-bottom: 30px;
+                ul {
+                    list-style: none;
+                }
+                .newsletterBox {
+                    margin-top: 15px;
+                    position: relative;
+                    .formGroup {
+                        // display: flex;
+                        position: relative;
+                        margin-bottom: 1rem;
+                        .iconEmail {
+                            color: #666666;
+                            position: absolute;
+                            right: 15px;
+                            top: 10px;
+                            font-size: 20px;
+                        }
+                    }
+                    .btnSubmit {
+                        background: #b0b435;
+                        border-radius: 2px;
+                        font-weight: 500;
+                        padding: 20px 30px;
+                        color: #fff;
+                        font-size: 16px;
+                        border: 1px solid #b0b435;
+                    }
+                    .btnSubmit:hover {
+                        cursor: pointer;
+                        background-color: #000;
+                        color: white;
+                        border: 1px solid #b0b435;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+    
+    .socialMediaIcon {
+        display: flex;
+        .iconItem {
+            color: #ffffff;
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border: 2px solid #ffffff;
+            text-align: center;
+            line-height: 32px;
+            margin: 15px 5px 0;
+        }
+    }
+    
+    .line {
+        border-top: 1px solid rgba(255, 255, 255, .6);
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .footerWidget {
+        p {
+            color: #cccccc;
+            font-weight: 400;
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+        h4 {
+            color: #ffffff;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: 700;
+        }
+        h4::before {
+            border-bottom: 3px solid #b0b435;
+            content: "";
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            bottom: 3px;
+            left: 0px;
+        }
+        p {
+            color: #ccc;
+        }
+    }
+    
+    .footerLink {
+        color: #fff;
+        h4 {
+            color: #ffffff;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: 700;
+        }
+        h4::before {
+            border-bottom: 3px solid #b0b435;
+            content: "";
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            bottom: 3px;
+            left: 0px;
+        }
+        ul {
+            list-style: none;
+        }
+    }
+    
+    .footerLinkContact {
+        color: #ccc;
+        box-sizing: border-box;
+        h4 {
+            color: #ffffff;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: 700;
+        }
+        h4::before {
+            border-bottom: 3px solid #b0b435;
+            content: "";
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            bottom: 3px;
+            left: 0px;
+        }
+        ul {
+            list-style: none;
+            li {
+                p {
+                    padding: 10px 0;
+                    position: relative;
+                    font-size: 16px;
+                    font-weight: 300;
+                    padding-right: 16px;
+                    line-height: 24px;
+                    padding-left: 30px;
+                    .contactIcon {
+                        padding: 10px 0;
+                        position: absolute;
+                        left: 0;
+                        top: 5px;
+                        padding-right: 6px;
+                    }
+                }
+                a {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+    
+    .linkInfor {
+        color: #ffffff;
+        text-align: left;
+        display: block;
+        line-height: 35px;
+        position: relative;
+        padding-left: 15px;
+    }
+    
+    .footerCopyright {
+        background: #060606;
+        padding: 20px 0px;
+        position: relative;
+        color: #ccc;
+        .footerCompany {
+            opacity: 0.5;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
