@@ -13,7 +13,7 @@ function Producttype() {
                 <li><Link to="/shop" style={{color:'#03332f', fontSize:'18px'}}>Rau củ</Link> </li>
                 <li><Link to="/shop" style={{color:'#03332f', fontSize:'18px'}}>Trái Cây</Link></li>
                 <li><Link to="/shop" style={{color:'#03332f', fontSize:'18px'}}>Hải Sản</Link></li>
-                <li><Link to="/shop" style={{color:'#03332f', fontSize:'18px'}}>Thịt</Link></li>
+                <li><Link to="/shop" style={{color:'#03332f', fontSize:'18px'}}>Thịt Heo</Link></li>
             </ul>
         </div>
 
