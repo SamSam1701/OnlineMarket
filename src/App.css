@@ -25,11 +25,10 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    /* font-family: 'Montserrat', sans-serif; */
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
-    /* color: var(--black); */
+    overflow-x: hidden;
     line-height: 1.80857;
 }
 
@@ -90,5 +89,17 @@ a[href] {
 }
 
 .Home {
+    background-color: #f4f4f4;
+}
+
+.Shop {
+    background-color: #f4f4f4;
+}
+
+.product-detail {
+    background-color: #f4f4f4;
+}
+
+.admin {
     background-color: #f4f4f4;
 }

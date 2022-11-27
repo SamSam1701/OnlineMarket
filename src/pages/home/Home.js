@@ -36,7 +36,7 @@ function Home() {
                             alt=""
                             />
                         <button className={styles.btnCategory}>
-                        <Link  to="#">
+                        <Link  to="/shop">
                         Lorem ipsum dolor
                         </Link>
                         </button>
@@ -50,7 +50,7 @@ function Home() {
                         alt=""
                         />
                         <button className={styles.btnCategory}>
-                        <Link  to="#">
+                        <Link  to="/shop">
                         Lorem ipsum dolor
                         </Link>
                         </button>
@@ -65,7 +65,7 @@ function Home() {
                         />
 
                         <button className={styles.btnCategory}>
-                        <Link  to="#">
+                        <Link  to="/shop">
                         Lorem ipsum dolor
                         </Link>
                         </button>
@@ -80,7 +80,7 @@ function Home() {
                             alt=""
                             />
                         <button className={styles.btnCategory}>
-                        <Link  to="#">
+                        <Link  to="/shop">
                         Lorem ipsum dolor
                         </Link>
                         </button>
@@ -94,7 +94,7 @@ function Home() {
                             alt=""
                             />
                         <button className={styles.btnCategory}>
-                        <Link  to="#">
+                        <Link  to="/shop">
                         Lorem ipsum dolor
                         </Link>
                         </button>

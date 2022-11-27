@@ -4,6 +4,7 @@ import Login from './pages/Login/Login';
 import Home from './pages/home/Home';
 import Shop from './pages/Shop/Shop';
 import ProductDetai from './pages/ProductDetail/ProductDetail';
+import Admin from './pages/Admin/Admin';
 
 function App() {
 
@@ -47,6 +48,10 @@ function App() {
     {
       path: "/productdetail",
       element: <ProductDetai />,
+    },
+    {
+      path: "/admin",
+      element: <Admin />,
     },
     // {
     //   path: "/register",

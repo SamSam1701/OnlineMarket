@@ -1,5 +1,6 @@
 import styless from "../home/Home.module.scss";
 import styles from "./ProductDetail.module.scss";
+import Shopstyles from "../Shop/Shop.module.scss";
 
 import Subnav from "../../components/Subnav/Subnav";
 import Header from "../../components/Header/Header";
@@ -10,14 +11,34 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight} from "@fortawesome/free-solid-svg-icons";
 
-import { Row, Col } from "antd";
-import { InputNumber} from 'antd';
+import { InputNumber,Breadcrumb, Input,Row, Col  } from 'antd';
+import {CommentOutlined}  from '@ant-design/icons';
 
 function ProductDetail() {
     return (
-        <div className="Home">
+        <div className="product-detail">
             <Subnav />
             <Header />
+
+
+            <div className={Shopstyles.allTitleBox}>
+                <div className={Shopstyles.container}>
+                    <Row>
+                        <Col lg={24}>
+                            <h2>CHI TIẾT SẢN PHẨM</h2>
+                            <div className={Shopstyles.breadcrumb}>
+
+                                <Breadcrumb>
+                                    <Breadcrumb.Item> <Link to="/" style={{color:'#fff', fontSize:'18px'}}>Trang chủ</Link></Breadcrumb.Item> 
+                                    <Breadcrumb.Item> <Link to="/shop" style={{color:'#fff', fontSize:'18px'}}>Cửa hàng</Link> </Breadcrumb.Item>
+                                    <Breadcrumb.Item  style={{fontSize:'18px'}}>Chi tiết sản phẩm</Breadcrumb.Item>
+                                </Breadcrumb>
+
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
+            </div>
     
             <Row gutter={[16, 16]}>
                 {/* cart */}
@@ -155,7 +176,8 @@ function ProductDetail() {
 						</div>
                         
 						<hr/>
-                        <button style={{borderRadius:'4px'}} className={styles.btnHover+' '+styles.color2}>Leave a review</button>
+                        <Input prefix={<CommentOutlined/>} size="large" placeholder="Bạn suy nghĩ gì..."></Input>
+                        <button style={{borderRadius:'4px', alignItems:'center'}} className={styles.btnHover+' '+styles.color2}>Bình Luận</button>
 					</div>
 				  </div>
             </Row>
@@ -181,7 +203,7 @@ function ProductDetail() {
                             alt=""
                             />
                         <button className={styless.btnCategory}>
-                        <Link  to="#">
+                        <Link  to="/productdetail">
                         Lorem ipsum dolor
                         </Link>
                         </button>
@@ -195,7 +217,7 @@ function ProductDetail() {
                         alt=""
                         />
                         <button className={styless.btnCategory}>
-                        <Link  to="#">
+                        <Link  to="/productdetail">
                         Lorem ipsum dolor
                         </Link>
                         </button>
@@ -210,7 +232,7 @@ function ProductDetail() {
                         />
 
                         <button className={styless.btnCategory}>
-                        <Link  to="#">
+                        <Link  to="/productdetail">
                         Lorem ipsum dolor
                         </Link>
                         </button>

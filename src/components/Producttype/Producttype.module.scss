@@ -1,0 +1,47 @@
+.container {
+    position: relative;
+    background-color: #e5d6aa;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.header {
+    background-color: #bf8725;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.content {
+    // display: block;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    ul {
+        display: block;
+        width: 100%;
+        padding-left: 10px;
+        list-style: none;
+    }
+    li {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #C13016;
+    }
+    li:hover {
+        animation: aniName 0.5s forwards;
+    }
+    @keyframes aniName {
+        0% {
+            left: 0px;
+        }
+        100% {
+            left: 5%;
+        }
+    }
+}
