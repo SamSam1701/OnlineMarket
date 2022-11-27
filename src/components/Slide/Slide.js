@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
-import { Row, Col } from "antd";
 import styles from "./Slide.module.scss";
-
 
 import { Carousel, Button } from "antd";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+
+
 function Slide() {
   const ref = useRef();
 
@@ -17,7 +17,7 @@ function Slide() {
     lineHeight: "160px",
     textAlign: "center",
   };
-
+ 
   return (
     <div className={styles.slide}>
 

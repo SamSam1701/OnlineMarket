@@ -88,3 +88,7 @@ a[href] {
     /* color: var(--text-color); */
     text-decoration: none;
 }
+
+.Home {
+    background-color: #f4f4f4;
+}

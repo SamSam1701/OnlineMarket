@@ -3,6 +3,7 @@ import './App.css';
 import Login from './pages/Login/Login';
 import Home from './pages/home/Home';
 import Shop from './pages/Shop/Shop';
+import ProductDetai from './pages/ProductDetail/ProductDetail';
 
 function App() {
 
@@ -42,6 +43,10 @@ function App() {
     {
       path: "/shop",
       element: <Shop />,
+    },
+    {
+      path: "/productdetail",
+      element: <ProductDetai />,
     },
     // {
     //   path: "/register",

@@ -9,7 +9,7 @@ function Subnav() {
 
         <div className={styles.containerFluid}>
           <Row>
-            <Col lg={18} md={6} sm={12} xs={12}>
+            <Col lg={18} md={12} sm={24} xs={24}>
               <div className={styles.rightInfoBox}>
               <FontAwesomeIcon icon={faPhone} />
                <p>+84 3537 411 56</p>
@@ -17,7 +17,7 @@ function Subnav() {
                 <p>FreshFood@gmail.com</p>
               </div>
             </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
+            <Col lg={6} md={12} sm={24} xs={24}>
                 <div className={styles.loginBox}>
                     <Button>Đăng nhập</Button>
                 </div>

@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.scss";
 import { Input, Button, Menu, Drawer } from "antd";
 import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
@@ -21,7 +19,7 @@ function Header() {
       <div className={styles.container}>
         <div className={styles.navbarHeader}>
           <Link to="/">
-            <img className="logo" src={require("../../assets/images/logo.png")}/>
+            <img atl="" className="" src={require("../../assets/images/logo.png")}/>
           </Link>
         </div>
 
@@ -77,14 +75,9 @@ function Header() {
         </Menu.Item>
         <Menu.Item key="news">
           <Link to="/">
-            <span className=""> TIN TỨC </span>{" "}
+            <span className=""> BÀI VIẾT </span>{" "}
           </Link>{" "}
         </Menu.Item>
-        <Menu.Item key="contact">
-          <Link to="/">
-            <span className=""> LIÊN HỆ </span>{" "}
-          </Link>{" "}
-        </Menu.Item>{" "}
       </Menu>
     );
   }
