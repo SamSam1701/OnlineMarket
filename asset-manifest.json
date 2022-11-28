@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/OnlineMarket/static/css/main.453dd820.css",
-    "main.js": "/OnlineMarket/static/js/main.02eda7f9.js",
+    "main.css": "/OnlineMarket/static/css/main.06b364be.css",
+    "main.js": "/OnlineMarket/static/js/main.981a941d.js",
     "static/js/787.c93672b9.chunk.js": "/OnlineMarket/static/js/787.c93672b9.chunk.js",
     "static/media/banner-01.jpg": "/OnlineMarket/static/media/banner-01.92f824e1fdafd6e67fa6.jpg",
     "static/media/all-bg-title.jpg": "/OnlineMarket/static/media/all-bg-title.3b912faa0a8852406d71.jpg",
@@ -15,12 +15,12 @@
     "static/media/big-img-02.jpg": "/OnlineMarket/static/media/big-img-02.27bc525db8efc0377ea4.jpg",
     "static/media/logo.png": "/OnlineMarket/static/media/logo.2d3bb7cd48d61be62426.png",
     "index.html": "/OnlineMarket/index.html",
-    "main.453dd820.css.map": "/OnlineMarket/static/css/main.453dd820.css.map",
-    "main.02eda7f9.js.map": "/OnlineMarket/static/js/main.02eda7f9.js.map",
+    "main.06b364be.css.map": "/OnlineMarket/static/css/main.06b364be.css.map",
+    "main.981a941d.js.map": "/OnlineMarket/static/js/main.981a941d.js.map",
     "787.c93672b9.chunk.js.map": "/OnlineMarket/static/js/787.c93672b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.453dd820.css",
-    "static/js/main.02eda7f9.js"
+    "static/css/main.06b364be.css",
+    "static/js/main.981a941d.js"
   ]
 }
