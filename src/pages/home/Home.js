@@ -37,7 +37,7 @@ function Home() {
                             />
                         <button className={styles.btnCategory}>
                         <Link  to="/shop">
-                        Lorem ipsum dolor
+                        Rau Củ
                         </Link>
                         </button>
                         </div>
@@ -51,7 +51,7 @@ function Home() {
                         />
                         <button className={styles.btnCategory}>
                         <Link  to="/shop">
-                        Lorem ipsum dolor
+                        Hải sản
                         </Link>
                         </button>
                     </div>
@@ -66,7 +66,7 @@ function Home() {
 
                         <button className={styles.btnCategory}>
                         <Link  to="/shop">
-                        Lorem ipsum dolor
+                        Thịt heo
                         </Link>
                         </button>
                     </div>
@@ -81,7 +81,7 @@ function Home() {
                             />
                         <button className={styles.btnCategory}>
                         <Link  to="/shop">
-                        Lorem ipsum dolor
+                        Trứng
                         </Link>
                         </button>
                         </div>
@@ -95,7 +95,7 @@ function Home() {
                             />
                         <button className={styles.btnCategory}>
                         <Link  to="/shop">
-                        Lorem ipsum dolor
+                        Thực phẩm bảo quản
                         </Link>
                         </button>
                         </div>
@@ -105,7 +105,7 @@ function Home() {
 
                         <div className={styles.shopCatBox}>
                             <img src={require("../../assets/images/categories_img_01.jpg")} alt="" />
-                            <button className={styles.btnCategory}><Link  to="#">Lorem ipsum dolor</Link></button>
+                            <button className={styles.btnCategory}><Link  to="#">Ngũ cốc</Link></button>
                         </div>
 
                     </Col>

@@ -96,9 +96,9 @@ function Shop() {
 
                       <div className={Shopstyles.btnGroup}>
                         <div className={Shopstyles.iconView}>
-                        <Link to="/productdetail"></Link>
-                          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
-                        </div>
+                          <Link to="/productdetail"></Link>
+                            <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                          </div>
 
                         <div className={Shopstyles.iconAddCart}>
                           <FontAwesomeIcon icon={faCartPlus} />
@@ -147,8 +147,8 @@ function Shop() {
 
                       <div className={Shopstyles.btnGroup}>
                         <div className={Shopstyles.iconView}>
-                        <Link to="/productdetail"></Link>
-                          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                        
+                          <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
                         <div className={Shopstyles.iconAddCart}>
@@ -197,8 +197,8 @@ function Shop() {
                       />
                       <div className={Shopstyles.btnGroup}>
                         <div className={Shopstyles.iconView}>
-                        <Link to="/productdetail"></Link>
-                          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                   
+                          <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
                         <div className={Shopstyles.iconAddCart}>
@@ -248,8 +248,8 @@ function Shop() {
 
                       <div className={Shopstyles.btnGroup}>
                         <div className={Shopstyles.iconView}>
-                        <Link to="/productdetail"></Link>
-                          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                        
+                          <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
                         <div className={Shopstyles.iconAddCart}>
@@ -299,8 +299,8 @@ function Shop() {
 
                       <div className={Shopstyles.btnGroup}>
                         <div className={Shopstyles.iconView}>
-                        <Link to="/productdetail"></Link>
-                          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                        
+                          <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
                         <div className={Shopstyles.iconAddCart}>
@@ -349,8 +349,8 @@ function Shop() {
                       />
                       <div className={Shopstyles.btnGroup}>
                         <div className={Shopstyles.iconView}>
-                        <Link to="/productdetail"></Link>
-                          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                        
+                          <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
                         <div className={Shopstyles.iconAddCart}>

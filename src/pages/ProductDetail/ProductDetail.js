@@ -136,29 +136,28 @@ function ProductDetail() {
 
                 <Col xl={14} lg={14} md={12}>
                   <div className={styles.productDetail}>
-                    <h2>Fachion Lorem ipsum dolor sit amet</h2>
+                    <h2>Rau Tươi Đà Lạt</h2>
                     <h5>
                       {" "}
-                      <del>$ 60.00</del> $40.79
+                      <del>19.000đ</del> 15.000đ
                     </h5>
                     <p>
-                      <span> More than 20 available /8 sold</span>
+                      <span> Có hơn 20 sản phẩm / 8 Đã bán</span>
                     </p>
-                    <h4>Short Description:</h4>
+                    <h4>Mô Tả Ngắn:</h4>
                     <p>
-                      Nam sagittis a augue eget scelerisque. Nullam lacinia
-                      consectetur sagittis. Nam sed neque id eros fermentum
-                      dignissim quis at tortor. Nullam ultricies urna quis sem
-                      sagittis pharetra. Nam erat turpis, cursus in ipsum at,
-                      tempor imperdiet metus. In interdum id nulla tristique
-                      accumsan. Ut semper in quam nec pretium. Donec egestas
-                      finibus suscipit. Curabitur tincidunt convallis arcu.{" "}
+                    Trái có kích thước lớn, màu sắc đỏ tươi, cuống tươi xanh<br/>
+                    Mùi vị rất thơm, có vị ngọt thanh tự nhiên<br/>
+                    Trái cây mọng, không bị dập nát<br/>
+                    Trọng lượng là 330gr/hộp<br/>
+                    Nhập khẩu trực tiếp từ Hàn Quốc<br/>
+                    100% nói không với chất bảo quản & trái cây Trung Quốc
                     </p>
 
                     <ul>
                       <li>
                         <div className={styles.quantityBox}>
-                          <strong>Quantity</strong>
+                          <strong>Số Lượng</strong>
                           <InputNumber min={1} max={1000} defaultValue={1} />
                         </div>
                       </li>
@@ -166,10 +165,10 @@ function ProductDetail() {
 
                     <div className={styles.btnGroup}>
                       <button className={styles.btnHover + " " + styles.color2}>
-                        Buy New
+                        Mua Ngay
                       </button>
                       <button className={styles.btnHover + " " + styles.color2}>
-                        Add to cart
+                        Thêm vào giỏ hàng
                       </button>
                     </div>
                   </div>
@@ -179,7 +178,7 @@ function ProductDetail() {
               <Row style={{ marginTop: "5rem", marginBottom: "5rem" }}>
                 <div className={styles.card} style={{ margin: "1.5rem 0" }}>
                   <div className={styles.cardHeader}>
-                    <h2>Product Reviews</h2>
+                    <h2>Đánh Giá</h2>
                   </div>
                   <div className={styles.cardBody}>
                     <div
@@ -194,11 +193,7 @@ function ProductDetail() {
                       </div>
                       <div className={styles.mediaBody}>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit. Omnis et enim aperiam inventore, similique
-                          necessitatibus neque non! Doloribus, modi sapiente
-                          laboriosam aperiam fugiat laborum. Sequi mollitia,
-                          necessitatibus quae sint natus.
+                         Sản phẩm rất tuyệt
                         </p>
                         <small>Posted by Anonymous on 3/1/18</small>
                       </div>
@@ -272,10 +267,9 @@ function ProductDetail() {
               <Row style={{ margin: "5rem 0" }}>
                 <Col lg={24}>
                   <div className={styles.title}>
-                    <h1>Featured Products</h1>
+                    <h1>Các Sản Phẩm Khác</h1>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed sit amet lacus enim.
+                        Các sản phẩm tương tự trong cửa hàng
                     </p>
                   </div>
 
@@ -295,8 +289,8 @@ function ProductDetail() {
 
                             <div className={Shopstyles.btnGroup}>
                               <div className={Shopstyles.iconView}>
-                                <Link to="/productdetail"></Link>
-                                <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                                
+                                <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                               </div>
 
                               <div className={Shopstyles.iconAddCart}>
@@ -345,8 +339,8 @@ function ProductDetail() {
 
                             <div className={Shopstyles.btnGroup}>
                               <div className={Shopstyles.iconView}>
-                                <Link to="/productdetail"></Link>
-                                <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                              
+                                <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                               </div>
 
                               <div className={Shopstyles.iconAddCart}>
@@ -396,8 +390,8 @@ function ProductDetail() {
 
                             <div className={Shopstyles.btnGroup}>
                               <div className={Shopstyles.iconView}>
-                                <Link to="/productdetail"></Link>
-                                <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                               
+                                <FontAwesomeIcon icon={faEye}> <Link to="/productdetail"></Link></FontAwesomeIcon>
                               </div>
 
                               <div className={Shopstyles.iconAddCart}>
