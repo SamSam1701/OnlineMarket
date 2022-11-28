@@ -1,7 +1,14 @@
 import styles from './Login.module.scss';
 import { Button, Checkbox, Form, Input } from "antd";
+import {Link} from 'react-router-dom';
 
 function Login() {
+
+  const handleLogin = ()=>{
+    return(
+      <Link to="/"></Link>
+    )
+  }
 
     const onFinish = (values) => {
         console.log('Success:', values);
@@ -74,7 +81,7 @@ function Login() {
           span: 16,
         }}
       >
-        <Button style={{marginRight:'10px'}} type="primary" htmlType="submit">
+        <Button style={{marginRight:'10px'}} type="primary" htmlType="submit" onClick={handleLogin}>
           ĐĂNG NHẬP
         </Button>
 

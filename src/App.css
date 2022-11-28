@@ -98,3 +98,24 @@ a[href] {
 .admin {
     background-color: #f4f4f4;
 }
+
+.disable {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    display: none;
+}
+
+.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 40%;
+    font-size: 16px;
+}
+
+.active p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
