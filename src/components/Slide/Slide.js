@@ -65,13 +65,13 @@ function Slide() {
               </strong>
             </h1>
             <p>
-              See how your users experience your website in realtime or view{" "}
-              <br /> trends to see any changes in performance over time.
+             Trải nghiệm bữa ăn sạch{" "}
+              tươi ngon giàu dinh dưỡng.
             </p>
 
             <div className={styles.Shopbtn}>
-                <Link style={{color:'white'}} to="/Shop">
-                  Shop New
+                <Link style={{color:'white'}} to="/shop">
+                  Mua Ngay
                            </Link>
             </div>
 

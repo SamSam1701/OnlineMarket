@@ -9,9 +9,7 @@ import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 
 import { Row, Col, Breadcrumb, Table,Button, Input,Modal } from "antd";
-import {EditOutlined, DeleteOutlined} from '@ant-design/icons'
-
-
+import {EditOutlined, DeleteOutlined} from '@ant-design/icons';
 
 function Admin() {
     const [isEditing, setIsEditing] = useState(false);

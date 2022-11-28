@@ -54,26 +54,28 @@
             color: #fff;
             padding-bottom: 30px;
         }
-        .Shopbtn {
-            background: #b0b435;
-            font-weight: 400;
-            text-align: center;
-            display: inline-block;
-            vertical-align: middle;
-            color: #fff;
-            font-size: 24px;
-            border: none;
-            text-transform: uppercase;
-            padding: 10px 20px;
-            border-radius: 4px;
-             :hover {
-                display: inline-block;
-                padding: 10px 20px;
-                cursor: pointer;
-                background: #000;
-                border-radius: 4px;
-                transition-duration: 0.2s;
-            }
-        }
     }
+}
+
+.Shopbtn {
+    background: #b0b435;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition-duration: 0.5s;
+}
+
+.Shopbtn:hover {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #000;
+    border-radius: 4px;
 }
