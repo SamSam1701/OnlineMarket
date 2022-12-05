@@ -1,10 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
-import styles from "./Slide.module.scss";
-
-import { Carousel, Button } from "antd";
+import SlideStyle from "./Slide.module.scss";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { Carousel, Button } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 
 function Slide() {
@@ -19,7 +18,7 @@ function Slide() {
   };
  
   return (
-    <div className={styles.slide}>
+    <div className={SlideStyle.slide}>
 
       <Carousel
         autoplay
@@ -30,7 +29,7 @@ function Slide() {
         effect="scrollx"
         ref={ref}
       >
-        <div className={styles.slideItems}>
+        <div className={SlideStyle.slideItems}>
           <img
             style={contentStyle}
             src={require("../../assets/images/banner-01.jpg")}
@@ -53,10 +52,10 @@ function Slide() {
         </div>
 
       </Carousel>
-      <div className={styles.overlayBackground}>
+      <div className={SlideStyle.overlayBackground}>
       </div>
 
-      <div className={styles.container}>
+      <div className={SlideStyle.container}>
         <div>
           <div>
             <h1>
@@ -69,7 +68,7 @@ function Slide() {
               tươi ngon giàu dinh dưỡng.
             </p>
 
-            <div className={styles.Shopbtn}>
+            <div className={SlideStyle.Shopbtn}>
                 <Link style={{color:'white'}} to="/shop">
                   Mua Ngay
                            </Link>
@@ -80,9 +79,9 @@ function Slide() {
       </div>
       
 
-      <div className={styles.ControlSlide}>
+      <div className={SlideStyle.ControlSlide}>
         <Button
-          className={styles.left}
+          className={SlideStyle.left}
           onClick={() => {
             ref.current.prev();
           }}
@@ -91,7 +90,7 @@ function Slide() {
         </Button>
 
         <Button
-          className={styles.right}
+          className={SlideStyle.right}
           onClick={() => {
             ref.current.next();
           }}

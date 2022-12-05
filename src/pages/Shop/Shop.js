@@ -1,5 +1,6 @@
-import styles from "../home/Home.module.scss";
-import Shopstyles from "./Shop.module.scss";
+import HomeStyle from "../home/Home.module.scss";
+import ShopStyle from "./Shop.module.scss";
+
 import Subnav from "../../components/Subnav/Subnav";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -20,12 +21,12 @@ function Shop() {
       <Header />
 
       {/* BreadScrumb */}
-      <div className={Shopstyles.allTitleBox}>
-        <div className={Shopstyles.container}>
+      <div className={ShopStyle.allTitleBox}>
+        <div className={ShopStyle.container}>
           <Row>
             <Col lg={24}>
               <h2>CỬA HÀNG</h2>
-              <div className={Shopstyles.breadcrumb}>
+              <div className={ShopStyle.breadcrumb}>
                 <Breadcrumb>
                   <Breadcrumb.Item>
                     {" "}
@@ -52,7 +53,7 @@ function Shop() {
         {/* content */}
         <Col lg={14}>
           <div
-            className={styles.sort}
+            className={HomeStyle.sort}
             style={{
               padding: "30px 0 10px 20px",
               borderBottom: "1px solid #ccc",
@@ -83,24 +84,24 @@ function Shop() {
             />
           </div>
 
-          <div className={styles.bodyContainer}>
-            <div className={styles.categoriesShop}>
-              <div className={styles.container}>
+          <div className={HomeStyle.bodyContainer}>
+            <div className={HomeStyle.categoriesShop}>
+              <div className={HomeStyle.container}>
                 <Row gutter={[24, 16]}>
                   <Col lg={8} md={8} sm={24} xs={24}>
-                    <div className={styles.shopCatBox}>
+                    <div className={HomeStyle.shopCatBox}>
                       <img
                         src={require("../../assets/images/categories_img_01.jpg")}
                         alt=""
                       />
 
-                      <div className={Shopstyles.btnGroup}>
-                        <div className={Shopstyles.iconView}>
+                      <div className={ShopStyle.btnGroup}>
+                        <div className={ShopStyle.iconView}>
                           <Link to="/productdetail"></Link>
                             <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
                           </div>
 
-                        <div className={Shopstyles.iconAddCart}>
+                        <div className={ShopStyle.iconAddCart}>
                           <FontAwesomeIcon icon={faCartPlus} />
                         </div>
                       </div>
@@ -139,19 +140,19 @@ function Shop() {
                   </Col>
 
                   <Col lg={8} md={8} sm={24} xs={24}>
-                    <div className={styles.shopCatBox}>
+                    <div className={HomeStyle.shopCatBox}>
                       <img
                         src={require("../../assets/images/categories_img_02.jpg")}
                         alt=""
                       />
 
-                      <div className={Shopstyles.btnGroup}>
-                        <div className={Shopstyles.iconView}>
+                      <div className={ShopStyle.btnGroup}>
+                        <div className={ShopStyle.iconView}>
                         
                           <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
-                        <div className={Shopstyles.iconAddCart}>
+                        <div className={ShopStyle.iconAddCart}>
                           <FontAwesomeIcon icon={faCartPlus} />
                         </div>
                       </div>
@@ -190,18 +191,18 @@ function Shop() {
                   </Col>
 
                   <Col lg={8} md={8} sm={24} xs={24}>
-                    <div className={styles.shopCatBox}>
+                    <div className={HomeStyle.shopCatBox}>
                       <img
                         src={require("../../assets/images/categories_img_03.jpg")}
                         alt=""
                       />
-                      <div className={Shopstyles.btnGroup}>
-                        <div className={Shopstyles.iconView}>
+                      <div className={ShopStyle.btnGroup}>
+                        <div className={ShopStyle.iconView}>
                    
                           <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
-                        <div className={Shopstyles.iconAddCart}>
+                        <div className={ShopStyle.iconAddCart}>
                           <FontAwesomeIcon icon={faCartPlus} />
                         </div>
                       </div>
@@ -240,19 +241,19 @@ function Shop() {
                   </Col>
 
                   <Col lg={8} md={8} sm={24} xs={24}>
-                    <div className={styles.shopCatBox}>
+                    <div className={HomeStyle.shopCatBox}>
                       <img
                         src={require("../../assets/images/categories_img_01.jpg")}
                         alt=""
                       />
 
-                      <div className={Shopstyles.btnGroup}>
-                        <div className={Shopstyles.iconView}>
+                      <div className={ShopStyle.btnGroup}>
+                        <div className={ShopStyle.iconView}>
                         
                           <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
-                        <div className={Shopstyles.iconAddCart}>
+                        <div className={ShopStyle.iconAddCart}>
                           <FontAwesomeIcon icon={faCartPlus} />
                         </div>
                       </div>
@@ -291,19 +292,19 @@ function Shop() {
                   </Col>
 
                   <Col lg={8} md={8} sm={24} xs={24}>
-                    <div className={styles.shopCatBox}>
+                    <div className={HomeStyle.shopCatBox}>
                       <img
                         src={require("../../assets/images/categories_img_01.jpg")}
                         alt=""
                       />
 
-                      <div className={Shopstyles.btnGroup}>
-                        <div className={Shopstyles.iconView}>
+                      <div className={ShopStyle.btnGroup}>
+                        <div className={ShopStyle.iconView}>
                         
                           <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
-                        <div className={Shopstyles.iconAddCart}>
+                        <div className={ShopStyle.iconAddCart}>
                           <FontAwesomeIcon icon={faCartPlus} />
                         </div>
                       </div>
@@ -342,18 +343,18 @@ function Shop() {
                   </Col>
 
                   <Col lg={8} md={8} sm={24} xs={24}>
-                    <div className={styles.shopCatBox}>
+                    <div className={HomeStyle.shopCatBox}>
                       <img
                         src={require("../../assets/images/categories_img_01.jpg")}
                         alt=""
                       />
-                      <div className={Shopstyles.btnGroup}>
-                        <div className={Shopstyles.iconView}>
+                      <div className={ShopStyle.btnGroup}>
+                        <div className={ShopStyle.iconView}>
                         
                           <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
                         </div>
 
-                        <div className={Shopstyles.iconAddCart}>
+                        <div className={ShopStyle.iconAddCart}>
                           <FontAwesomeIcon icon={faCartPlus} />
                         </div>
                       </div>

@@ -1,14 +1,13 @@
-import styles from './Producttype.module.scss'
-
+import ProductStyle from './Producttype.module.scss'
 import { Link } from "react-router-dom";
 
 function Producttype() {
     return (
-        <div className={styles.container}>
-        <div className={styles.header}>
+        <div className={ProductStyle.container}>
+        <div className={ProductStyle.header}>
         <h1>Danh mục</h1>
         </div>
-        <div className={styles.content}>
+        <div className={ProductStyle.content}>
             <ul>
                 <li><Link to="/shop" style={{color:'#03332f', fontSize:'18px'}}>Rau củ</Link> </li>
                 <li><Link to="/shop" style={{color:'#03332f', fontSize:'18px'}}>Trái Cây</Link></li>

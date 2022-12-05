@@ -1,30 +1,30 @@
-import styles from "./Header.module.scss";
-import { Input, Button, Menu, Drawer } from "antd";
-import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
+import HeaderStyle from "./Header.module.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Input, Button, Menu, Drawer } from "antd";
+import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
 
 function Header() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className={styles.mainHeader}>
-      <div style={{ height: "60px", paddingLeft: "12px", paddingTop: "12px" }} className={styles.MenuToggle}>
+    <div className={HeaderStyle.mainHeader}>
+      <div style={{ height: "60px", paddingLeft: "12px", paddingTop: "12px" }} className={HeaderStyle.MenuToggle}>
         <MenuOutlined style={{ color: "black", fontSize: "30px" }} onClick={() => {
             setOpenMenu(true);
           }}
         />
       </div>
 
-      <div className={styles.container}>
-        <div className={styles.navbarHeader}>
+      <div className={HeaderStyle.container}>
+        <div className={HeaderStyle.navbarHeader}>
           <Link to="/">
             <img atl="" className="" src={require("../../assets/images/logo.png")}/>
           </Link>
         </div>
 
-        <div className={styles.MenuItems}>
-          <div className={styles.headerMenu}>
+        <div className={HeaderStyle.MenuItems}>
+          <div className={HeaderStyle.headerMenu}>
             <NavMenu />
           </div>
 
@@ -36,9 +36,9 @@ function Header() {
             <NavMenu isInline> </NavMenu>
           </Drawer>
 
-          <div className={styles.search}>
-            <Input className={styles.searchInput} placeholder="Nhập sản phẩm..."></Input>
-            <Button className={styles.searchIcon} icon={<SearchOutlined />}></Button>
+          <div className={HeaderStyle.search}>
+            <Input className={HeaderStyle.searchInput} placeholder="Nhập sản phẩm..."></Input>
+            <Button className={HeaderStyle.searchIcon} icon={<SearchOutlined />}></Button>
           </div>
         </div>
       </div>

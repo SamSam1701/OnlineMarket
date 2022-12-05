@@ -1,17 +1,20 @@
-import styles from './Category.module.scss';
+import CateStyle from './Category.module.scss';
+
 import React, { useEffect, useState } from 'react';
-import { Avatar, List, message } from 'antd';
-import VirtualList from 'rc-virtual-list';
 import { Link } from "react-router-dom";
+
+import { Avatar, List, message } from 'antd';
+import { Badge } from 'antd';
+import {DeleteOutlined} from '@ant-design/icons'
+
+import VirtualList from 'rc-virtual-list';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
-import { Badge } from 'antd';
-import {DeleteOutlined} from '@ant-design/icons'
 
 function Category() {
-    const fakeDataUrl = 'https://randomuser.me/api/?results=20&inc=name,gender,email,nat,picture&noinfo';
+    const fakeDataUrl = 'https://randomuser.me/api/?results=20&inc=name,gender,email,nat,picture&noinfo'; //api fake
     const ContainerHeight = 400;
     const [data, setData] = useState([]);
     
@@ -33,16 +36,13 @@ function Category() {
       }
     }
 
-    console.log(data);
-
-
     return ( 
       
-        <div className={styles.cartContainer}>
+        <div className={CateStyle.cartContainer}>
               <Badge count={100}>
                   <FontAwesomeIcon style={{fontSize:'50px', color:'#3333FF'}} icon={faCartShopping} />
               </Badge>
-        <div className={styles.category}>
+        <div className={CateStyle.category}>
             <List>
               <VirtualList data={data} height={ContainerHeight} itemHeight={47} itemKey="email" onScroll={onScroll}>
                 {(item) => (
@@ -61,13 +61,13 @@ function Category() {
               </VirtualList>
             </List>
 
-          <div className={styles.footerCart}>
+          <div className={CateStyle.footerCart}>
                   <span>Tổng tiền: <strong style={{color:'red'}}>150.000đ</strong></span>
-                  <button style={{borderRadius:'4px', alignItems:'center'}} className={styles.btnHover+' '+styles.color2}>Thanh Toán</button>
+                  <button style={{borderRadius:'4px', alignItems:'center'}} className={CateStyle.btnHover+' '+CateStyle.color2}>Thanh Toán</button>
           </div>
         </div>
 
-        <div className={styles.cartDisable}>
+        <div className={CateStyle.cartDisable}>
           <h1>ĐĂNG NHẬP ĐỂ XEM GIỎ HÀNG</h1>
         </div>
     </div>

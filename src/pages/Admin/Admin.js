@@ -1,5 +1,4 @@
-// import styles from "./Home.module.scss";
-import Shopstyles from "../Shop/Shop.module.scss";
+import ShopStyle from "../Shop/Shop.module.scss";
 
 import { useState } from "react";
 
@@ -123,12 +122,12 @@ function Admin() {
             <Subnav />
             <Header />
     
-            <div className={Shopstyles.allTitleBox}>
-                <div className={Shopstyles.container}>
+            <div className={ShopStyle.allTitleBox}>
+                <div className={ShopStyle.container}>
                     <Row>
                         <Col lg={24}>
                             <h2>QUẢN TRỊ</h2>
-                            <div className={Shopstyles.breadcrumb}>
+                            <div className={ShopStyle.breadcrumb}>
 
                                 <Breadcrumb>
                                     <Breadcrumb.Item> <Link to="/" style={{color:'#fff', fontSize:'18px'}}>Trang chủ</Link></Breadcrumb.Item> 

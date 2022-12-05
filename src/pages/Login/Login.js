@@ -1,4 +1,4 @@
-import styles from './Login.module.scss';
+import LoginStyle from './Login.module.scss';
 import { Button, Checkbox, Form, Input } from "antd";
 import {Link} from 'react-router-dom';
 
@@ -19,9 +19,9 @@ function Login() {
 
     return (
         
-        <div className={styles.login}>
+        <div className={LoginStyle.login}>
                    <h1>LOGIN FORM</h1>
-            <div className={styles.loginForm}>
+            <div className={LoginStyle.loginForm}>
      
             <Form
       name="basic"

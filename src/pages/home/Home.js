@@ -1,4 +1,4 @@
-import styles from "./Home.module.scss";
+import HomeStyle from "./Home.module.scss";
 
 import Subnav from "../../components/Subnav/Subnav";
 import Header from "../../components/Header/Header";
@@ -23,19 +23,19 @@ function Home() {
 
           {/* content */}
             <Col lg={18}>
-            <div className={styles.bodyContainer}>
+            <div className={HomeStyle.bodyContainer}>
 
         <Slide />
-        <div className={styles.categoriesShop}>
-            <div className={styles.container}>
+        <div className={HomeStyle.categoriesShop}>
+            <div className={HomeStyle.container}>
                 <Row gutter={[24, 16]}>
                     <Col lg={8} md={8} sm ={24} xs={24} >
-                        <div className={styles.shopCatBox}>
+                        <div className={HomeStyle.shopCatBox}>
                             <img
                             src={require("../../assets/images/categories_img_01.jpg")}
                             alt=""
                             />
-                        <button className={styles.btnCategory}>
+                        <button className={HomeStyle.btnCategory}>
                         <Link  to="/shop">
                         Rau Củ
                         </Link>
@@ -44,12 +44,12 @@ function Home() {
                     </Col>
 
                     <Col lg={8} md={8} sm ={24} xs={24} >
-                    <div className={styles.shopCatBox}>
+                    <div className={HomeStyle.shopCatBox}>
                     <img
                         src={require("../../assets/images/categories_img_02.jpg")}
                         alt=""
                         />
-                        <button className={styles.btnCategory}>
+                        <button className={HomeStyle.btnCategory}>
                         <Link  to="/shop">
                         Hải sản
                         </Link>
@@ -58,13 +58,13 @@ function Home() {
                     </Col>
 
                     <Col lg={8} md={8} sm ={24} xs={24} >
-                    <div className={styles.shopCatBox}>
+                    <div className={HomeStyle.shopCatBox}>
                     <img
                         src={require("../../assets/images/categories_img_03.jpg")}
                         alt=""
                         />
 
-                        <button className={styles.btnCategory}>
+                        <button className={HomeStyle.btnCategory}>
                         <Link  to="/shop">
                         Thịt heo
                         </Link>
@@ -74,12 +74,12 @@ function Home() {
 
 
                     <Col lg={8} md={8} sm ={24} xs={24} >
-                        <div className={styles.shopCatBox}>
+                        <div className={HomeStyle.shopCatBox}>
                             <img
                             src={require("../../assets/images/categories_img_01.jpg")}
                             alt=""
                             />
-                        <button className={styles.btnCategory}>
+                        <button className={HomeStyle.btnCategory}>
                         <Link  to="/shop">
                         Trứng
                         </Link>
@@ -88,12 +88,12 @@ function Home() {
                     </Col>
 
                     <Col lg={8} md={8} sm ={24} xs={24} >
-                        <div className={styles.shopCatBox}>
+                        <div className={HomeStyle.shopCatBox}>
                             <img
                             src={require("../../assets/images/categories_img_01.jpg")}
                             alt=""
                             />
-                        <button className={styles.btnCategory}>
+                        <button className={HomeStyle.btnCategory}>
                         <Link  to="/shop">
                         Thực phẩm bảo quản
                         </Link>
@@ -103,9 +103,9 @@ function Home() {
 
                     <Col lg={8} md={8} sm ={24} xs={24} >
 
-                        <div className={styles.shopCatBox}>
+                        <div className={HomeStyle.shopCatBox}>
                             <img src={require("../../assets/images/categories_img_01.jpg")} alt="" />
-                            <button className={styles.btnCategory}><Link  to="#">Ngũ cốc</Link></button>
+                            <button className={HomeStyle.btnCategory}><Link  to="#">Ngũ cốc</Link></button>
                         </div>
 
                     </Col>
