@@ -20,6 +20,8 @@ function Category() {
 
   const [items, setItems] = useState([]);
 
+  const [change, setChange] = useState(0);
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getItems = () => {
     const items = [
@@ -40,16 +42,16 @@ function Category() {
 
   const sumPriceCart = () => {
     let sumPrice = 0;
-    console.log('sumPriceCart');
     for (let index in items) {
       sumPrice += (items[index].unit * (items[index].number|| 1));
     }
     setTotal(sumPrice);
-  }
+    setChange(0);
+  };
 
   const handleDeleteProduct = () => {
 
-  }
+  };
 
   useEffect(() => {
     getItems();
@@ -58,27 +60,24 @@ function Category() {
   
   const handleNumberChange = (value, index) => {
     const newData = items;
-    console.log('value', value);
-    console.log('index', index);
     newData[index].number = value;
-    console.log('newData: ', newData);
-    setItems(newData);
+    setChange(1);
   };
 
   useEffect(() => {
     sumPriceCart();
-  }, [items]);
+  }, [change]);
 
 
   const onScroll = (e) => {
-  }
+  };
 
   return (
     <Card
       className={CateStyle.cartContainer}
       title={
-        <Badge count={100}>
-          <FontAwesomeIcon style={{ fontSize: '50px', color: '#DEECEC', justifyContent: 'center' }} icon={faCartShopping} />
+        <Badge count={items.length}>
+          <FontAwesomeIcon style={{ fontSize: '50px', color: '#DEECEC' }} icon={faCartShopping} />
         </Badge>}
       style={{
         margin: 10,
