@@ -18,25 +18,29 @@ function Admin() {
             id:1,
             url:'https://img.icons8.com/dusk/2x/chart.png',
             nameproduct:'Rau cải',
-            price:'19.000đ'
+            price:'19.000đ',
+            Cate:'Rau củ',
         },
         {
             id:2,
             url:'../../assets/images/gallery-img-02.jpg',
             nameproduct:'Rau muống',
-            price:'9.000đ'
+            price:'9.000đ',
+            Cate:'Rau củ',
         },
         {
             id:3,
             url:'../../assets/images/gallery-img-03.jpg',
             nameproduct:'Rau răm',
-            price:'9.000đ'
+            price:'9.000đ',
+            Cate:'Rau củ',
         },
         {
             id:4,
             url:'../../assets/images/gallery-img-04.jpg',
             nameproduct:'Rau má',
-            price:'5000đ'
+            price:'5000đ',
+            Cate:'Rau củ',
         },
 
     ])
@@ -50,7 +54,7 @@ function Admin() {
             key:'2',
             title: 'Hình ảnh',
             dataIndex: 'url',
-            render: () => <img style={{width:'40px', height:'40px'}} src={`https://wrfarmers.com/wp-content/uploads/2021/09/ca%CC%89i-thi%CC%80a-.jpeg`} atl=""/>
+            render: () => <img style={{width:'40px', height:'40px'}} src={`https://wrfarmers.com/wp-content/uploads/2021/09/ca%CC%89i-thi%CC%80a-.jpeg`} atl="pic"/>
          },
         {
             key:'3',
@@ -63,7 +67,12 @@ function Admin() {
             dataIndex:'price'
         },
         {
-            key:'5',
+          key:'5',
+          title:'Danh mục',
+          dataIndex:'Cate'
+      },
+        {
+            key:'6',
             title:'Actions',
             render:(record)=>{
                 return (
@@ -144,7 +153,7 @@ function Admin() {
 
             <div className="" style={{margin:'20px 10px'}}>
 
-            <Button type='primary' onClick={onAddStudent}>Add a new product</Button>
+            <Button type='primary' onClick={onAddStudent}>Thêm mới sản phẩm</Button>
         <Table columns={columns} dataSource={dataSource}></Table>
         <Modal
           title="Edit Student"
@@ -187,6 +196,14 @@ function Admin() {
             onChange={(e) => {
               setEditingStudent((pre) => {
                 return { ...pre, price: e.target.value };
+              });
+            }}
+          />
+            <Input
+            value={editingStudent?.Cate}
+            onChange={(e) => {
+              setEditingStudent((pre) => {
+                return { ...pre, Cate: e.target.value };
               });
             }}
           />

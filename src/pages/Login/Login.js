@@ -1,15 +1,15 @@
 import LoginStyle from './Login.module.scss';
 import { Button, Checkbox, Form, Input } from "antd";
 import {Link} from 'react-router-dom';
-
+import { useContext } from 'react';
+import { AuthContext } from "../../context/AuthContext";
 function Login() {
 
-  const handleLogin = ()=>{
-    return(
-      <Link to="/"></Link>
-    )
-  }
-
+  const {login} = useContext(AuthContext);
+  const handleLogin = () => {
+    login();
+  };
+  
     const onFinish = (values) => {
         console.log('Success:', values);
       };

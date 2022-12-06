@@ -25,7 +25,7 @@ function Footer() {
             <Row gutter={[24, 16]}>
               <Col lg={8} md={24} sm={24}>
                 <div className={FooterStyle.footerTopBox}>
-                  <h3>Business Time</h3>
+                  <h3>Thời Gian Mở Cửa</h3>
                   <ul className={FooterStyle.listTime}>
                     <li>Monday - Friday: 08.00am to 05.00pm</li>
                     <li>Saturday: 10.00am to 08.00pm</li>
@@ -37,7 +37,7 @@ function Footer() {
               </Col>
               <Col lg={8} md={24} sm={24}>
                 <div className={FooterStyle.footerTopBox}>
-                  <h3>Newsletter</h3>
+                  <h3>Gửi Email</h3>
                   <form className={FooterStyle.newsletterBox}>
                     <div className={FooterStyle.formGroup}>
                       <input
@@ -60,7 +60,7 @@ function Footer() {
               </Col>
               <Col lg={8} md={24} sm={24}>
                 <div className={FooterStyle.footerTopBox}>
-                  <h3>Social Media</h3>
+                  <h3>Mạng Xã Hội</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
@@ -105,7 +105,7 @@ function Footer() {
             <Row gutter={[24, 16]}>
               <Col lg={8} md={24} sm={24}>
                 <div className={FooterStyle.footerWidget}>
-                  <h4>About Freshshop</h4>
+                  <h4>Cửa Hàng FreshShop</h4>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -121,7 +121,7 @@ function Footer() {
               </Col>
               <Col lg={8} md={24} sm={24}>
                 <div className={FooterStyle.footerLink}>
-                  <h4>Information</h4>
+                  <h4>Thông Tin</h4>
                   <ul>
                     <li>
                       <Link className={FooterStyle.linkInfor} to="/">
@@ -159,7 +159,7 @@ function Footer() {
 
               <Col lg={8} md={24} sm={24}>
                 <div className={FooterStyle.footerLinkContact}>
-                  <h4>Contact Us</h4>
+                  <h4>Liên Hệ</h4>
                   <ul>
                     <li>
                       <p>

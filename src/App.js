@@ -5,14 +5,18 @@ import Shop from './pages/Shop/Shop';
 import ProductDetai from './pages/ProductDetail/ProductDetail';
 import Admin from './pages/Admin/Admin';
 
-import {createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {createBrowserRouter, RouterProvider,Navigate } from 'react-router-dom';
+
+import { AuthContext } from "./context/AuthContext";
+import {useContext} from 'react';
 
 function App() {
+  // const {currentUser} = useContext(AuthContext);
 
   // const ProtectedRoute = ({ children }) => {
-  //   // if (!currentUser) {
-  //   //   return <Navigate to="/login" />;
-  //   // }
+  //   if (!currentUser) {
+  //     return <Navigate to="/login" />;
+  //   }
   //   return children;
   // };
 
