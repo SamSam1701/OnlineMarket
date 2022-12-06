@@ -139,14 +139,17 @@ function Shop() {
                         <img src={item.profilePicture} alt="" />
 
                         <div className={ShopStyle.btnGroup}>
+
                           <div className={ShopStyle.iconView}>
-                            <Link to="/productdetail"></Link>
+                            <Link style={{width:'40px', right:'auto', left:'0'}} to="/productdetail"></Link>
                             <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
                           </div>
 
                           <div className={ShopStyle.iconAddCart}>
+                          <Link style={{width:'40px',right:'0', left:'auto'}} to="/shop"></Link>
                             <FontAwesomeIcon icon={faCartPlus} />
                           </div>
+
                         </div>
 
                         <h5

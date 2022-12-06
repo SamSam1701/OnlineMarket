@@ -62,6 +62,7 @@
     left: 0;
     width: 100%;
     .iconView {
+        display: block;
         border-radius: 50%;
         text-align: center;
         background-color: #88C1A3;
@@ -70,6 +71,7 @@
         transition-duration: 0.3s;
     }
     .iconAddCart {
+        display: block;
         border-radius: 50%;
         text-align: center;
         background-color: #88C1A3;
