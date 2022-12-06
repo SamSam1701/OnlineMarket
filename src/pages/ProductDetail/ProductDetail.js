@@ -21,6 +21,29 @@ import { CommentOutlined } from "@ant-design/icons";
 
 function ProductDetail() {
 
+  const productItems = [
+    {
+      id: 1,
+      name: "Rau muống",
+      oldPrice: 19000,
+      newPrice: 15000,
+      profilePicture: require("../../assets/images/categories_img_01.jpg"),
+    },
+    {
+      id: 2,
+      name: "Cà chua",
+      oldPrice: 6000,
+      newPrice: 3000,
+      profilePicture: require("../../assets/images/categories_img_02.jpg"),
+    },
+    {
+      id: 3,
+      name: "Hành lá",
+      oldPrice: 19000,
+      newPrice: 15000,
+      profilePicture: require("../../assets/images/categories_img_03.jpg"),
+    },
+  ];
 
   const comments = [
     {
@@ -259,157 +282,55 @@ function ProductDetail() {
                   >
                     <div className={HomeStyle.container}>
                       <Row gutter={[24, 16]}>
-                        <Col lg={8} md={8} sm={24} xs={24}>
-                          <div className={HomeStyle.shopCatBox}>
-                            <img
-                              src={require("../../assets/images/categories_img_01.jpg")}
-                              alt=""
-                            />
+                      {productItems.map((item) => (
+                    <Col key={item.id} lg={8} md={8} sm={24} xs={24}>
+                      <div className={HomeStyle.shopCatBox}>
+                        <img src={item.profilePicture} alt="" />
 
-                            <div className={ShopStyle.btnGroup}>
-                              <div className={ShopStyle.iconView}>
-                                
-                                <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
-                              </div>
-
-                              <div className={ShopStyle.iconAddCart}>
-                                <FontAwesomeIcon icon={faCartPlus} />
-                              </div>
-                            </div>
-
-                            <h5
-                              style={{
-                                margin: "10px 0",
-                                color: "#b0b435",
-                                fontSize: "16px",
-                                fontWeight: "500",
-                              }}
-                            >
-                              {" "}
-                              <del style={{ color: "black", fontSize: "12px" }}>
-                                19.000đ
-                              </del>{" "}
-                              12.0000đ
-                            </h5>
-                            <strong style={{ lineHeight: "0" }}>
-                              <Link
-                                style={{
-                                  color: "#C13016",
-                                  textAlign: "left",
-                                  fontSize: "16px",
-                                }}
-                                to="/productdetail"
-                              >
-                                {" "}
-                                <span style={{ color: "black" }}>
-                                  Tên sản phẩm:
-                                </span>{" "}
-                                Tỏi
-                              </Link>
-                            </strong>
+                        <div className={ShopStyle.btnGroup}>
+                          <div className={ShopStyle.iconView}>
+                            <Link to="/productdetail"></Link>
+                            <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
                           </div>
-                        </Col>
-                        <Col lg={8} md={8} sm={24} xs={24}>
-                          <div className={HomeStyle.shopCatBox}>
-                            <img
-                              src={require("../../assets/images/categories_img_01.jpg")}
-                              alt=""
-                            />
 
-                            <div className={ShopStyle.btnGroup}>
-                              <div className={ShopStyle.iconView}>
-                              
-                                <FontAwesomeIcon icon={faEye}><Link to="/productdetail"></Link></FontAwesomeIcon>
-                              </div>
-
-                              <div className={ShopStyle.iconAddCart}>
-                                <FontAwesomeIcon icon={faCartPlus} />
-                              </div>
-                            </div>
-
-                            <h5
-                              style={{
-                                margin: "10px 0",
-                                color: "#b0b435",
-                                fontSize: "16px",
-                                fontWeight: "500",
-                              }}
-                            >
-                              {" "}
-                              <del style={{ color: "black", fontSize: "12px" }}>
-                                19.000đ
-                              </del>{" "}
-                              12.0000đ
-                            </h5>
-                            <strong style={{ lineHeight: "0" }}>
-                              <Link
-                                style={{
-                                  color: "#C13016",
-                                  textAlign: "left",
-                                  fontSize: "16px",
-                                }}
-                                to="/productdetail"
-                              >
-                                {" "}
-                                <span style={{ color: "black" }}>
-                                  Tên sản phẩm:
-                                </span>{" "}
-                                Tỏi
-                              </Link>
-                            </strong>
+                          <div className={ShopStyle.iconAddCart}>
+                            <FontAwesomeIcon icon={faCartPlus} />
                           </div>
-                        </Col>
+                        </div>
 
-                        <Col lg={8} md={8} sm={24} xs={24}>
-                          <div className={HomeStyle.shopCatBox}>
-                            <img
-                              src={require("../../assets/images/categories_img_01.jpg")}
-                              alt=""
-                            />
-
-                            <div className={ShopStyle.btnGroup}>
-                              <div className={ShopStyle.iconView}>
-                               
-                                <FontAwesomeIcon icon={faEye}> <Link to="/productdetail"></Link></FontAwesomeIcon>
-                              </div>
-
-                              <div className={ShopStyle.iconAddCart}>
-                                <FontAwesomeIcon icon={faCartPlus} />
-                              </div>
-                            </div>
-
-                            <h5
-                              style={{
-                                margin: "10px 0",
-                                color: "#b0b435",
-                                fontSize: "16px",
-                                fontWeight: "500",
-                              }}
-                            >
-                              {" "}
-                              <del style={{ color: "black", fontSize: "12px" }}>
-                                19.000đ
-                              </del>{" "}
-                              12.0000đ
-                            </h5>
-                            <strong style={{ lineHeight: "0" }}>
-                              <Link
-                                style={{
-                                  color: "#C13016",
-                                  textAlign: "left",
-                                  fontSize: "16px",
-                                }}
-                                to="/productdetail"
-                              >
-                                {" "}
-                                <span style={{ color: "black" }}>
-                                  Tên sản phẩm:
-                                </span>{" "}
-                                Tỏi
-                              </Link>
-                            </strong>
-                          </div>
-                        </Col>
+                        <h5
+                          style={{
+                            margin: "10px 0",
+                            color: "#b0b435",
+                            fontSize: "16px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          {" "}
+                          <del style={{ color: "black", fontSize: "12px" }}>
+                            {item.oldPrice}đ
+                          </del>{" "}
+                          {item.newPrice}đ
+                        </h5>
+                        <strong style={{ lineHeight: "0" }}>
+                          <Link
+                            style={{
+                              color: "#C13016",
+                              textAlign: "left",
+                              fontSize: "16px",
+                            }}
+                            to="/productdetail"
+                          >
+                            {" "}
+                            <span style={{ color: "black" }}>
+                              Tên sản phẩm:
+                            </span>{" "}
+                            {item.name}
+                          </Link>
+                        </strong>
+                      </div>
+                    </Col>
+                  ))}
                       </Row>
                     </div>
                   </div>
