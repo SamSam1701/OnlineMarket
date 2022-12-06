@@ -10,6 +10,44 @@ import { Link } from "react-router-dom";
 import { Row, Col } from "antd";
 
 function Home() {
+
+    const category = [
+        {
+            id: 1,
+            name: "Rau củ",
+            profilePicture:
+            require("../../assets/images/categories_img_01.jpg"),
+          },
+          {
+            id: 2,
+            name: "Trái cây",
+            profilePicture:
+            require("../../assets/images/categories_img_02.jpg"),
+          },
+          {
+            id: 3,
+            name: "Hải sản",
+            profilePicture:
+            require("../../assets/images/categories_img_03.jpg"),
+          },
+          {
+            id: 4,
+            name: "Thịt Heo",
+            profilePicture:require("../../assets/images/categories_img_01.jpg"),
+          },
+          {
+            id: 5,
+            name: "Ngũ cốc",
+            profilePicture: require("../../assets/images/categories_img_02.jpg"),
+          },
+          {
+            id: 6,
+            name: "Thực phẩm khác",
+            profilePicture:
+            require("../../assets/images/categories_img_03.jpg"),
+          },
+    ]
+
   return (
     <div className="Home">
         <Subnav />
@@ -29,87 +67,25 @@ function Home() {
         <div className={HomeStyle.categoriesShop}>
             <div className={HomeStyle.container}>
                 <Row gutter={[24, 16]}>
-                    <Col lg={8} md={8} sm ={24} xs={24} >
+
+
+                {category.map((type)=>(
+             
+                      <Col key={type.id} lg={8} md={8} sm ={24} xs={24} >
                         <div className={HomeStyle.shopCatBox}>
                             <img
-                            src={require("../../assets/images/categories_img_01.jpg")}
+                            src={type.profilePicture}
                             alt=""
                             />
-                        <button className={HomeStyle.btnCategory}>
-                        <Link  to="/shop">
-                        Rau Củ
-                        </Link>
-                        </button>
+
+                            <button className={HomeStyle.btnCategory}>
+                            <Link  to="/shop">
+                                {type.name}
+                            </Link>
+                            </button>
                         </div>
                     </Col>
-
-                    <Col lg={8} md={8} sm ={24} xs={24} >
-                    <div className={HomeStyle.shopCatBox}>
-                    <img
-                        src={require("../../assets/images/categories_img_02.jpg")}
-                        alt=""
-                        />
-                        <button className={HomeStyle.btnCategory}>
-                        <Link  to="/shop">
-                        Hải sản
-                        </Link>
-                        </button>
-                    </div>
-                    </Col>
-
-                    <Col lg={8} md={8} sm ={24} xs={24} >
-                    <div className={HomeStyle.shopCatBox}>
-                    <img
-                        src={require("../../assets/images/categories_img_03.jpg")}
-                        alt=""
-                        />
-
-                        <button className={HomeStyle.btnCategory}>
-                        <Link  to="/shop">
-                        Thịt heo
-                        </Link>
-                        </button>
-                    </div>
-                    </Col>
-
-
-                    <Col lg={8} md={8} sm ={24} xs={24} >
-                        <div className={HomeStyle.shopCatBox}>
-                            <img
-                            src={require("../../assets/images/categories_img_01.jpg")}
-                            alt=""
-                            />
-                        <button className={HomeStyle.btnCategory}>
-                        <Link  to="/shop">
-                        Trứng
-                        </Link>
-                        </button>
-                        </div>
-                    </Col>
-
-                    <Col lg={8} md={8} sm ={24} xs={24} >
-                        <div className={HomeStyle.shopCatBox}>
-                            <img
-                            src={require("../../assets/images/categories_img_01.jpg")}
-                            alt=""
-                            />
-                        <button className={HomeStyle.btnCategory}>
-                        <Link  to="/shop">
-                        Thực phẩm bảo quản
-                        </Link>
-                        </button>
-                        </div>
-                    </Col>
-
-                    <Col lg={8} md={8} sm ={24} xs={24} >
-
-                        <div className={HomeStyle.shopCatBox}>
-                            <img src={require("../../assets/images/categories_img_01.jpg")} alt="" />
-                            <button className={HomeStyle.btnCategory}><Link  to="#">Ngũ cốc</Link></button>
-                        </div>
-
-                    </Col>
-
+                  ))}
                 </Row>
             </div>
       </div>

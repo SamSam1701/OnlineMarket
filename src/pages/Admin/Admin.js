@@ -193,8 +193,6 @@ function Admin() {
         </Modal>
             </div>
 
-
-    
             <Footer />
         </div>
       );

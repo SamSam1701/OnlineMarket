@@ -30,8 +30,6 @@
         flex: 1;
         display: inline;
         border: 1px solid black;
-        // height: 40px;
-        // width: 100%;
     }
     .searchIcon {
         font-size: 1.6rem;
@@ -54,12 +52,9 @@
     .headerMenu {
         display: none;
     }
-    .navbarHeader {
-        a {
-            img {
-                display: none;
-            }
-        }
+    .container {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
