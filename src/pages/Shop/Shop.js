@@ -13,8 +13,15 @@ import { Select, Breadcrumb } from "antd";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faEye } from "@fortawesome/free-solid-svg-icons";
+import { createContext } from "react";
+
+
+export const  itemContext = createContext();
 
 function Shop() {
+
+  
+
   const productItems = [
     {
       id: 1,
@@ -60,7 +67,14 @@ function Shop() {
     },
   ];
 
+
+  const handleAddItem = ()=>{
+    // console.log({
+    //   id: 11, title: 'Cá ngừ', number: 1, unit: 10000, img: 'https://top10tphcm.com/wp-content/uploads/2021/06/nhung-dia-chi-ban-thit-lon-sach-tphcm.jpg',})
+  }
+
   return (
+    <itemContext.Provider value={handleAddItem()}>
     <div className="Shop">
       <Subnav />
       <Header />
@@ -92,7 +106,10 @@ function Shop() {
       <Row gutter={[16, 16]}>
         {/* cart */}
         <Col style={{ backgroundColor: "#e5d6aa" }} lg={6}>
+
+        
           <Category />
+
         </Col>
 
         {/* content */}
@@ -141,7 +158,7 @@ function Shop() {
                         <div className={ShopStyle.btnGroup}>
 
                           <div className={ShopStyle.iconView}>
-                            <Link style={{width:'40px', right:'auto', left:'0'}} to="/productdetail"></Link>
+                            <Link onClick={handleAddItem(item.id)} style={{width:'40px', right:'auto', left:'0'}} to="/productdetail"></Link>
                             <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
                           </div>
 
@@ -198,7 +215,9 @@ function Shop() {
 
       <Footer />
     </div>
+    </itemContext.Provider>
   );
+
 }
 
 export default Shop;

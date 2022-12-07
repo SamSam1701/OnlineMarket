@@ -8,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import Category from "../../components/category/Category";
 
 import { Link } from "react-router-dom";
+import {useEffect, useState} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleLeft,
@@ -18,6 +19,7 @@ import {
 
 import { InputNumber, Breadcrumb, Input, Row, Col } from "antd";
 import { CommentOutlined } from "@ant-design/icons";
+import React from "react";
 
 function ProductDetail() {
 
@@ -45,7 +47,7 @@ function ProductDetail() {
     },
   ];
 
-  const comments = [
+    const comments = [
     {
       id: 1,
       desc: "Sản phẩm tuyệt vời, lần sau sẽ tiếp tục ủng hộ",
@@ -63,6 +65,18 @@ function ProductDetail() {
         "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
     }
   ]
+
+  const [cmt, setCmt] = useState('')
+
+  const curUser = {
+    id: 0,
+    desc: {cmt},
+    name: "Jane Doe",
+    userId: 2,
+    profilePicture:
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  }
+
 
   return (
     <div className="product-detail">
@@ -253,6 +267,7 @@ function ProductDetail() {
                       prefix={<CommentOutlined />}
                       size="large"
                       placeholder="Bạn suy nghĩ gì..."
+                      onChange={(e)=>setCmt(e.target.value)}
                     ></Input>
 
                     <button
@@ -261,6 +276,8 @@ function ProductDetail() {
                     >
                       Bình Luận
                     </button>
+                    
+
                   </div>
                 </div>
                 </Col>
