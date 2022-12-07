@@ -52,6 +52,7 @@ function Category() {
     setTotal(sumPrice);
     setChange(0);
   };
+
   const handleDeleteProduct = (id) => {
     const newCart = items.filter((item)=>item.id!==id);
     setItems(newCart);
@@ -71,7 +72,7 @@ function Category() {
 
   useEffect(() => {
     sumPriceCart();
-  }, [change]);
+  }, [change, items]);
 
 
   const onScroll = (e) => {
@@ -110,7 +111,7 @@ function Category() {
                   {item.unit + 'đ'}
                   </div>
                 </div>
-                <InputNumber min={1} max={10} defaultValue={item.number} onChange={(event) => handleNumberChange(event, index)} />
+                <InputNumber min={1} max={100} defaultValue={item.number} onChange={(event) => handleNumberChange(event, index)} />
                 <div>
                   <button style={{ background: '#deecec', cursor: 'pointer' }} onClick={()=>handleDeleteProduct(item.id)}>
                     <DeleteOutlined style={{ color: 'red', marginLeft: '12px' }} />
