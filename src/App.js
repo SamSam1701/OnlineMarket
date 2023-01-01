@@ -9,6 +9,7 @@ import {createBrowserRouter, RouterProvider,Navigate } from 'react-router-dom';
 
 import { AuthContext } from "./context/AuthContext";
 import {useContext} from 'react';
+import CheckOut from './pages/CheckOut/CheckOut';
 
 function App() {
   // const {currentUser} = useContext(AuthContext);
@@ -53,6 +54,10 @@ function App() {
     {
       path: "/admin",
       element: <Admin />,
+    },
+    {
+      path: "/checkout",
+      element: <CheckOut />,
     },
 
   ]);

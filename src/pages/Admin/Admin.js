@@ -105,7 +105,7 @@ function Admin() {
 
       const onDeleteStudent = (record) => {
         Modal.confirm({
-          title: "Are you sure, you want to delete this student record?",
+          title: "Bạn có chắc muốn xóa sản phẩm này?",
           okText: "Yes",
           okType: "danger",
           onOk: () => {

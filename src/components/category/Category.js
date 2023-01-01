@@ -123,7 +123,10 @@ function Category() {
 
         <div className={CateStyle.footerCart}>
           <span>Tổng tiền: <strong style={{ color: 'red' }}> {total.toLocaleString('it-IT', { style: 'currency', currency: 'vnd' })}</strong></span>
-          <button style={{ borderRadius: '4px', alignItems: 'center' }} className={CateStyle.btnHover + ' ' + CateStyle.color2}>Thanh Toán</button>
+         
+          <button style={{ borderRadius: '4px', alignItems: 'center' }} className={CateStyle.btnHover + ' ' + CateStyle.color2}> <Link to="/checkout">
+            <span className=""> THANH TOÁN </span>{" "}
+          </Link>{" "} </button>
         </div>
       </div>
 
