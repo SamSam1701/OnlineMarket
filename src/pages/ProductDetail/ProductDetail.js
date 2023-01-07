@@ -19,8 +19,8 @@ import {
 import { Carousel } from "antd"
 import { useRef } from "react";
 
-import { InputNumber, Breadcrumb, Input, Row, Col, Button } from "antd";
-import { CommentOutlined } from "@ant-design/icons";
+import { InputNumber, Breadcrumb, Input, Row, Col, Modal, Button } from "antd";
+import { CommentOutlined, DeleteOutlined } from "@ant-design/icons";
 import React from "react";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 function ProductDetail() {
@@ -72,7 +72,7 @@ function ProductDetail() {
       id: 2,
       desc: "Shop quá tệ",
       name: "Jane Doe",
-      userId: 2,
+      userId: 0,
       profilePicture:
         "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
       date: "3/1/2021",
@@ -131,6 +131,16 @@ function ProductDetail() {
     window.addEventListener("resize", render)
   })
   const slider = useRef();
+  const handleDeleteComment = (id) => {
+    Modal.confirm({
+      title: "Bạn có chắc muốn xóa đánh giá này?",
+      okText: "Yes",
+      okType: "danger",
+      onOk: () => {
+        setComments(comments.filter((cmt) => cmt.id !== id))
+      },
+    });
+  }
   return (
     <div className="product-detail">
       <Subnav />
@@ -348,11 +358,10 @@ function ProductDetail() {
                     </div>
 
 
-                    <div className={ProductDetailStyle.cardBody}>
-
-
+                  <div className={ProductDetailStyle.cardBody}>
                   {comments.map((comment)=>(
                     <div key={comment.id}>
+                      <div className={ProductDetailStyle.commentBox}>
                       <div className={ProductDetailStyle.media} style={{ marginBottom: "1rem" }}>
                         <div style={{ marginRight: "1rem" }}>
                           <img alt="" src={comment.profilePicture}/>
@@ -361,6 +370,10 @@ function ProductDetail() {
                         <p>{comment.desc}</p>
                           <small>Posted by {comment.name} on {comment.date}</small>
                         </div>
+                      </div>
+                      {comment.userId === curUser.id && (
+                        <DeleteOutlined onClick={()=>handleDeleteComment(comment.id)} style={{cursor: "pointer"}}/>
+                      )}
                       </div>
                       <hr />
                     </div>

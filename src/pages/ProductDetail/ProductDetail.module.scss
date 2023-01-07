@@ -247,16 +247,23 @@
 .cardBody {
     flex: 1 1 auto;
     padding: 1.25rem;
-    .media {
+    .commentBox {
         display: flex;
         align-items: flex-start;
-        img {
-            width: 64px;
-            height: 64px;
-            border: 1px solid #dee2e6;
-            border-radius: 50%;
-            padding: 0.25rem;
-            object-fit: cover;
+        justify-content: space-between;
+        flex-direction: row;
+        .media {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            img {
+                width: 64px;
+                height: 64px;
+                border: 1px solid #dee2e6;
+                border-radius: 50%;
+                padding: 0.25rem;
+                object-fit: cover;
+            }
         }
     }
     hr {
