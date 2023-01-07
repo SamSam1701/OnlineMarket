@@ -27,6 +27,13 @@ function ProductDetail() {
   const ref = useRef();
   const [display_market, setDisplay] = useState(true)
   const [display_button, setdisplayButton] = useState(false)
+  
+  const curUser = {
+    id: 0,
+    name: "Jane Doe",
+    profilePicture:
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  }
   const productItems = [
     {
       id: 1,
@@ -51,7 +58,7 @@ function ProductDetail() {
     },
   ];
 
-  const comments = [
+    const [comments, setComments] = useState([
     {
       id: 1,
       desc: "Sản phẩm tuyệt vời, lần sau sẽ tiếp tục ủng hộ",
@@ -59,7 +66,8 @@ function ProductDetail() {
       userId: 1,
       profilePicture:
         "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
+      date: "3/1/2021",
+      },
     {
       id: 2,
       desc: "Shop quá tệ",
@@ -67,18 +75,24 @@ function ProductDetail() {
       userId: 2,
       profilePicture:
         "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    }
-  ]
+      date: "3/1/2021",
+      }
+  ]);
 
   const [cmt, setCmt] = useState('')
-
-  const curUser = {
-    id: 0,
-    desc: { cmt },
-    name: "Jane Doe",
-    userId: 2,
-    profilePicture:
-      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  const handleComment = () => {
+    if (!cmt) return;
+    const nextID = Math.max(...comments.map((cmt) => cmt.id)) + 1
+    const newComment = {
+      id: nextID,
+      desc: cmt,
+      name: curUser.name,
+      userId: curUser.id,
+      profilePicture: curUser.profilePicture,
+      date: new Date().toJSON().slice(0,10).split('-').reverse().join('/')
+    }
+    setCmt('')
+    setComments([...comments, newComment])
   }
   const render = () => {
     if (window.innerWidth < 992) {
@@ -337,35 +351,37 @@ function ProductDetail() {
                     <div className={ProductDetailStyle.cardBody}>
 
 
-                      {comments.map((comment) => (
-                        <div>
-                          <div className={ProductDetailStyle.media} style={{ marginBottom: "1rem" }}>
-                            <div style={{ marginRight: "1rem" }}>
-                              <img alt="" src={comment.profilePicture} />
-                            </div>
-                            <div className={ProductDetailStyle.mediaBody}>
-                              <p>{comment.desc}</p>
-                              <small>Posted by Anonymous on 3/1/18</small>
-                            </div>
-                          </div>
-                          <hr />
+                  {comments.map((comment)=>(
+                    <div key={comment.id}>
+                      <div className={ProductDetailStyle.media} style={{ marginBottom: "1rem" }}>
+                        <div style={{ marginRight: "1rem" }}>
+                          <img alt="" src={comment.profilePicture}/>
                         </div>
-                      ))}
+                        <div className={ProductDetailStyle.mediaBody}>
+                        <p>{comment.desc}</p>
+                          <small>Posted by {comment.name} on {comment.date}</small>
+                        </div>
+                      </div>
+                      <hr />
+                    </div>
+                  ))}
 
-                      <Input
-                        prefix={<CommentOutlined />}
-                        size="large"
-                        placeholder="Bạn suy nghĩ gì..."
-                        onChange={(e) => setCmt(e.target.value)}
-                      ></Input>
+                    <Input
+                      prefix={<CommentOutlined />}
+                      size="large"
+                      placeholder="Bạn suy nghĩ gì..."
+                      value={cmt}
+                      onChange={(e)=>setCmt(e.target.value)}
+                    ></Input>
 
-                      <button
-                        style={{ borderRadius: "4px", alignItems: "center" }}
-                        className={ProductDetailStyle.btnHover + " " + ProductDetailStyle.color2}
-                      >
-                        Bình Luận
-                      </button>
-
+                    <button
+                      style={{ borderRadius: "4px", alignItems: "center" }}
+                      className={ProductDetailStyle.btnHover + " " + ProductDetailStyle.color2}
+                      onClick={()=>handleComment()}
+                    >
+                      Bình Luận
+                    </button>
+                    
 
                     </div>
                   </div>
