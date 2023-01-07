@@ -103,13 +103,10 @@ function Shop() {
         </div>
       </div>
 
-      <Row gutter={[16, 16]}>
+      <Row gutter={[24, 16]}>
         {/* cart */}
-        <Col style={{ backgroundColor: "#e5d6aa" }} lg={6}>
-
-        
+        <Col style={{ backgroundColor: "#e5d6aa" }} lg={6} xs={24} md={24} sm={24}>
           <Category />
-
         </Col>
 
         {/* content */}
@@ -208,7 +205,7 @@ function Shop() {
           </div>
         </Col>
 
-        <Col lg={4}>
+        <Col lg={4} md={24} sm={24}>
           <Producttype />
         </Col>
       </Row>

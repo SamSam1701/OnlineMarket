@@ -27,18 +27,16 @@
 }
 
 .btnHover {
-    width: 200px;
+    width: 100%;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
-    margin: 20px;
     height: 55px;
     text-align: center;
     border: none;
     background-size: 300% 100%;
     border-radius: 50px;
-    moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -62,10 +60,9 @@
 }
 
 .footerCart {
-    text-align: center;
+    margin: 10px 0 10px 0;
     span {
-        display: block;
-        padding: 10px;
+        display: flex;
         font-size: 20px;
     }
 }

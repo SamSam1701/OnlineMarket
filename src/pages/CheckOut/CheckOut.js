@@ -20,7 +20,7 @@ const CheckOut = () => {
         <div className={ShopStyle.allTitleBox}>
           <div className={ShopStyle.container}>
             <Row>
-              <Col lg={24}>
+              <Col lg={24} >
                 <h2>THANH TOÁN</h2>
                 <div className={ShopStyle.breadcrumb}>
                   <Breadcrumb>

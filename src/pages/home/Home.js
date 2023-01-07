@@ -55,7 +55,7 @@ function Home() {
 
         <Row gutter={[16, 16]}>
             {/* cart */}
-          <Col style={{backgroundColor:'#e5d6aa'}} lg={6}>
+          <Col style={{backgroundColor:'#e5d6aa'}} lg={6} md={24} xs={24} sx={24}>
             <Category/>
           </Col>
 

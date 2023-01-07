@@ -17,12 +17,13 @@ import {
   faEye,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { InputNumber, Breadcrumb, Input, Row, Col } from "antd";
+import { InputNumber, Breadcrumb, Input, Row, Col, Button } from "antd";
 import { CommentOutlined } from "@ant-design/icons";
 import React from "react";
-
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 function ProductDetail() {
-
+  const [display_market, setDisplay ] = useState(true)
+  const [display_button, setdisplayButton ] = useState(false)
   const productItems = [
     {
       id: 1,
@@ -76,8 +77,28 @@ function ProductDetail() {
     profilePicture:
       "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
   }
+  const render =() =>{
+    if (window.innerWidth < 992) {
+      setDisplay(false);
+      setdisplayButton(true);
+    }
+    else{
+      setdisplayButton(false);
+      setDisplay(true);
+    }
+  }
+  const handleClick = () =>{
+    setDisplay(!display_market);
+    console.log(display_market);
+  };
 
+  useEffect(() => {
+    render();
+  }, []);
 
+  useEffect(() => {
+    window.addEventListener("resize", render)
+  })
   return (
     <div className="product-detail">
       <Subnav />
@@ -92,7 +113,7 @@ function ProductDetail() {
                 <Breadcrumb>
                   <Breadcrumb.Item>
                     {" "}
-                    <Link to="/" style={{ color: "#fff", fontSize: "18px" }}>
+                    <Link to="/" style={{ color: "#fff"}}>
                       Trang chủ
                     </Link>
                   </Breadcrumb.Item>
@@ -100,12 +121,12 @@ function ProductDetail() {
                     {" "}
                     <Link
                       to="/shop"
-                      style={{ color: "#fff", fontSize: "18px" }}
+                      style={{ color: "#fff" }}
                     >
                       Cửa hàng
                     </Link>{" "}
                   </Breadcrumb.Item>
-                  <Breadcrumb.Item style={{ fontSize: "18px" }}>
+                  <Breadcrumb.Item style={{}}>
                     Chi tiết sản phẩm
                   </Breadcrumb.Item>
                 </Breadcrumb>
@@ -117,16 +138,26 @@ function ProductDetail() {
 
       <Row gutter={[16, 16]}>
         {/* cart */}
-        <Col style={{ backgroundColor: "#e5d6aa" }} lg={6}>
+        <Col style={{ display: display_button ? 'flex' : 'none', marginTop:10}} lg={24} md={24} sx={24} xs={24}>
+          <Button 
+            className={ProductDetailStyle.btnHover}
+            site='large'
+            onClick={handleClick} 
+            style={{ margin: 'auto', backgroundColor: '#738276', width: 400 }} 
+            shape='round'> 
+            Giỏ Hàng <FontAwesomeIcon icon={faCaretDown} style={{marginLeft:10}}/>
+          </Button>
+        </Col>
+        <Col style={{ display: display_market ? 'list-item' : 'none', backgroundColor: "#e5d6aa" }} lg={6} md={24} sx={24} xs={24}>
           <Category />
         </Col>
 
         {/* content */}
-        <Col lg={18}>
+        <Col lg={18} md={24} sx={24}>
           <div className={ProductDetailStyle.shopDetailBoxMain}>
             <div className={ProductDetailStyle.container}>
               <Row gutter={[40, 32]}>
-                <Col xl={10} lg={10} md={12}>
+                <Col xl={10} lg={10} md={12} sx={8} xs={24}>
                   <div className={ProductDetailStyle.carouselSlide}>
                     <div className={ProductDetailStyle.carouselInner}>
                       <div
@@ -192,7 +223,7 @@ function ProductDetail() {
                   </div>
                 </Col>
 
-                <Col xl={14} lg={14} md={12}>
+                <Col xl={14} lg={14} md={12} sx={16} xs={24}>
                   <div className={ProductDetailStyle.productDetail}>
                     <h2>Rau Tươi Đà Lạt</h2>
                     <h5>
@@ -237,7 +268,7 @@ function ProductDetail() {
 
 
               <Row style={{ marginTop: "5rem", marginBottom: "5rem" }}>
-              <Col lg={24}>
+              <Col lg={24} md={24} sx={24} xs={24}>
                 <div className={ProductDetailStyle.card} style={{ margin: "1.5rem 0" }}>
 
                   <div className={ProductDetailStyle.cardHeader}>

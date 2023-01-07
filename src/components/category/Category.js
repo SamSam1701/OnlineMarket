@@ -3,7 +3,7 @@ import CateStyle from './Category.module.scss';
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
-import { Avatar, List, Card, InputNumber } from 'antd';
+import { Avatar, List, Card, InputNumber, Button } from 'antd';
 import { Badge } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons'
 
@@ -120,15 +120,15 @@ function Category() {
               </List.Item>
             )}
           </VirtualList>
+          <div className={CateStyle.footerCart}>
+            <span>Tổng: <strong style={{ color: 'red' }}> {total.toLocaleString('it-IT', { style: 'currency', currency: 'vnd' })}</strong></span>
+            <Button style={{ borderRadius: '4px' }} className={CateStyle.btnHover + ' ' + CateStyle.color2}> <Link to="/checkout">
+              Thanh Toán
+            </Link></Button>
+          </div>
         </List>
 
-        <div className={CateStyle.footerCart}>
-          <span>Tổng tiền: <strong style={{ color: 'red' }}> {total.toLocaleString('it-IT', { style: 'currency', currency: 'vnd' })}</strong></span>
-         
-          <button style={{ borderRadius: '4px', alignItems: 'center' }} className={CateStyle.btnHover + ' ' + CateStyle.color2}> <Link to="/checkout">
-            <span className=""> THANH TOÁN </span>{" "}
-          </Link>{" "} </button>
-        </div>
+        
       </div>
 
       <div className={CateStyle.cartDisable}>
