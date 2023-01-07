@@ -47,14 +47,14 @@ function Category() {
   const sumPriceCart = () => {
     let sumPrice = 0;
     for (let index in items) {
-      sumPrice += (items[index].unit * (items[index].number|| 1));
+      sumPrice += (items[index].unit * (items[index].number || 1));
     }
     setTotal(sumPrice);
     setChange(0);
   };
 
   const handleDeleteProduct = (id) => {
-    const newCart = items.filter((item)=>item.id!==id);
+    const newCart = items.filter((item) => item.id !== id);
     setItems(newCart);
     setChange(1);
   }
@@ -63,7 +63,7 @@ function Category() {
     getItems();
   }, []);
 
-  
+
   const handleNumberChange = (value, index) => {
     const newData = items;
     newData[index].number = value;
@@ -102,18 +102,18 @@ function Category() {
           <VirtualList data={items} height={ContainerHeight} itemHeight={50} itemKey="email" onScroll={onScroll} xs={12} md={4}>
             {(item, index) => (
               <List.Item key={item.id}>
-                <Avatar src={item.img}/>
-                <div style={{display:'flex',flexDirection:'column'}}>
+                <Avatar src={item.img} />
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <div style={{ textAlign: 'left', }} >
                     <Link to="/productdetail"><strong>{item.title}</strong></Link>
                   </div>
                   <div style={{ textAlign: 'left', }} >
-                  {item.unit + 'đ'}
+                    {item.unit + 'đ'}
                   </div>
                 </div>
                 <InputNumber min={1} max={100} defaultValue={item.number} onChange={(event) => handleNumberChange(event, index)} />
                 <div>
-                  <button style={{ background: '#deecec', cursor: 'pointer' }} onClick={()=>handleDeleteProduct(item.id)}>
+                  <button style={{ background: '#deecec', cursor: 'pointer' }} onClick={() => handleDeleteProduct(item.id)}>
                     <DeleteOutlined style={{ color: 'red', marginLeft: '12px' }} />
                   </button>
                 </div>
@@ -123,12 +123,12 @@ function Category() {
           <div className={CateStyle.footerCart}>
             <span>Tổng: <strong style={{ color: 'red' }}> {total.toLocaleString('it-IT', { style: 'currency', currency: 'vnd' })}</strong></span>
             <Button style={{ borderRadius: '4px' }} className={CateStyle.btnHover + ' ' + CateStyle.color2}> <Link to="/checkout">
-              Thanh Toán
+              <p style={{ color: 'white' }}> Thanh Toán </p>
             </Link></Button>
           </div>
         </List>
 
-        
+
       </div>
 
       <div className={CateStyle.cartDisable}>
