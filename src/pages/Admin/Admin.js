@@ -20,7 +20,7 @@ import {
   message,
   Select,
 } from "antd";
-import { EditOutlined, DeleteOutlined, LoadingOutlined, PlusOutlined } from "@ant-design/icons";
+import { EditOutlined, DeleteOutlined, LoadingOutlined, PlusOutlined, UploadOutlined } from "@ant-design/icons";
 import img1 from "../../assets/images/rau-cai.jpg";
 import img2 from "../../assets/images/rau-muong.png";
 import img3 from "../../assets/images/rau-ram.jpg";
@@ -45,8 +45,6 @@ const beforeUpload = (file) => {
 
 
 function Admin() {
-  const [isEditing, setIsEditing] = useState(false);
-  const [editingProduct, setEditingProduct] = useState(null);
   const [dataSource, setDataSource] = useState([
     {
       id: 1,
@@ -134,6 +132,8 @@ function Admin() {
     },
   ];
 
+  const [isEditing, setIsEditing] = useState(false);
+  const [editingProduct, setEditingProduct] = useState(null);
   const onDeleteProduct = (record) => {
     Modal.confirm({
       title: "Bạn có chắc muốn xóa sản phẩm này?",
@@ -146,16 +146,29 @@ function Admin() {
       },
     });
   };
-
   const onEditProduct = (record) => {
     setIsEditing(true);
     setEditingProduct({ ...record });
   };
-
   const resetEditing = () => {
     setIsEditing(false);
     setEditingProduct(null);
   };
+  const handleEditImgChange = (info) => {
+    if (info.file.status === "uploading") {
+      setLoadingImg(true);
+      return;
+    }
+    if (info.file.status === "done") {
+      getBase64(info.file.originFileObj, (imageUrl) => {
+        setEditingProduct((pre) => {
+          return { ...pre, url: imageUrl };
+        });
+        setLoadingImg(false);
+      });
+    }
+  };
+
 
   const [isAdding, setIsAdding] = useState(false);
   const [addingProduct, setAddingProduct] = useState(null);
@@ -193,10 +206,10 @@ function Admin() {
     if (info.file.status === "error") {
       setLoadingImg(false);
       message.error("Upload failed");
-
     }
     }
   };
+
 
   
   return (
@@ -232,12 +245,15 @@ function Admin() {
       <div className="" style={{ margin: "20px 10px" }}>
         <Button type="primary" onClick={()=>{
           onAddProduct()
-        }}>
-          Thêm mới sản phẩm
+        }}
+        icon={<PlusOutlined />}
+        style={{marginBottom: "20px"}}
+        >
+          Thêm mặt hàng mới
         </Button>
         <Table columns={columns} dataSource={dataSource}></Table>
         <Modal
-          title="Edit Product"
+          title={`Chỉnh sửa sản phẩm ${editingProduct?.id}`}
           visible={isEditing}
           okText="Save"
           onCancel={() => {
@@ -256,38 +272,71 @@ function Admin() {
             resetEditing();
           }}
         >
-          <Input
-            value={editingProduct?.url}
-            onChange={(e) => {
-              setEditingProduct((pre) => {
-                return { ...pre, url: e.target.value };
-              });
-            }}
-          />
-          <Input
-            value={editingProduct?.nameproduct}
-            onChange={(e) => {
-              setEditingProduct((pre) => {
-                return { ...pre, nameproduct: e.target.value };
-              });
-            }}
-          />
-          <Input
-            value={editingProduct?.price}
-            onChange={(e) => {
-              setEditingProduct((pre) => {
-                return { ...pre, price: e.target.value };
-              });
-            }}
-          />
-          <Input
-            value={editingProduct?.Cate}
-            onChange={(e) => {
-              setEditingProduct((pre) => {
-                return { ...pre, Cate: e.target.value };
-              });
-            }}
-          />
+          <Form
+            labelCol={{ span: 6 }}
+            wrapperCol={{ span: 14 }}
+            layout="horizontal"
+            initialValues={{ size: "default" }}
+            size={"default"}
+          >
+            <Form.Item label="Hình ảnh" >
+              <div className="avatar" style={{display: "flex" , flexDirection: "column"}}>
+              <img
+                    className="avatar-uploader"
+                    src={editingProduct?.url}
+                    alt="avatar"
+                    style={{ width: "100px", marginBottom: "10px", border: "1px solid #d9d9d9", borderRadius: "4px"}}
+              />
+              <Upload
+                name="avatar"
+                showUploadList={false}
+                beforeUpload={beforeUpload}
+                onChange={handleEditImgChange}
+              >
+              <Button icon={<UploadOutlined />}>Chọn ảnh khác</Button>
+              </Upload>
+              </div>
+            </Form.Item>
+            <Form.Item label="Tên sản phẩm">
+              <Input
+                value={editingProduct?.nameproduct}
+                onChange={(e) => {
+                  setEditingProduct((pre) => {
+                    return { ...pre, nameproduct: e.target.value };
+                  });
+                }}
+              />
+            </Form.Item>
+            <Form.Item label="Giá sản phẩm">
+              <Input
+                value={editingProduct?.price}
+                onChange={(e) => {
+                  setEditingProduct((pre) => {
+                    return { ...pre, price: e.target.value };
+                  });
+                }}
+              />
+            </Form.Item>
+            <Form.Item label="Danh mục">
+              <Select
+                value={editingProduct?.Cate}
+                onChange={(value) => {
+                  setEditingProduct((pre) => {
+                    return { ...pre, Cate: value };
+                  });
+                }}
+                options={[
+                { value: "Rau củ", label: "Rau củ" },
+                { value: "Trái cây", label: "Trái cây" },
+                { value: "Hải sản", label: "Hải sản" },
+                { value: "Thịt", label: "Thịt" },
+                { value: "Ngũ cốc", label: "Ngũ cốc" },
+                { value: "Khác", label: "Khác" },
+              ]}
+              />
+            </Form.Item>
+          </Form>
+              
         </Modal>
         <Modal
           title="Thêm sản phẩm"
