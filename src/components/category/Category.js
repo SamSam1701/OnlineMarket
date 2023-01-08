@@ -28,8 +28,10 @@ function Category({ newItems }) {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getItems = () => {
-    if (newItems?.length === 0) {
-      console.log(newItems)
+    if (newItems?.length > 0) {
+      setItems(newItems)
+      localStorage.setItem("items", JSON.stringify(newItems))
+    } else {
       const storageItem = localStorage.getItem("items") !== 'undefined' ? JSON.parse(localStorage.getItem("items")) : null
       if (storageItem) {
         setItems(storageItem)
@@ -49,9 +51,6 @@ function Category({ newItems }) {
         setItems(items);
         localStorage.setItem("items", JSON.stringify(items))
       }
-    } else {
-      setItems(newItems)
-      localStorage.setItem("items", JSON.stringify(newItems))
     }
   }
 
