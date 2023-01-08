@@ -183,7 +183,7 @@ function ProductDetail() {
         <Col style={{ display: display_button ? 'flex' : 'none', marginTop: 10 }} lg={24} md={24} sx={24} xs={24}>
           <Button
             className={ProductDetailStyle.btnHover}
-            site='large'
+            size='large'
             onClick={handleClick}
             style={{ margin: 'auto', backgroundColor: '#738276', width: 400 }}
             shape='round'>

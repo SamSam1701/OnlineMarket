@@ -1,8 +1,9 @@
 import SubnavStyle from "./Subnav.module.scss";
-import { Col, Row, Button } from 'antd';
+import { Col, Row, Button} from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faHand, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
 import {useReducer, useState} from 'react';
+import { Link } from "react-router-dom";
 
 function Subnav() {
 
@@ -40,7 +41,9 @@ function Subnav() {
 
                     <div className={isActive ? 'disable' : 'active'}>
                     {/* <FontAwesomeIcon icon={faUser} /> */}
-                    <img style={{width:'35px', height:'35px', borderRadius:'50%'}} src={user.img} alt="avatar" />
+                    <Link to="/admin">
+                      <img style={{width:'35px', height:'35px', borderRadius:'50%'}} src={user.img} alt="avatar"/>
+                    </Link>
                     <p style={{padding:'0 10px'}}>{user.name}</p>
 
                     <button style={{padding:'10px 16px', borderRadius:'4px', cursor:'pointer', background:'#b0b435', color:'#fff'}} onClick={faHandleClickLogin}>

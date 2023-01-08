@@ -8,8 +8,7 @@ import Category from "../../components/category/Category";
 import Producttype from "../../components/Producttype/Producttype";
 import { Link } from "react-router-dom";
 
-import { Row, Col } from "antd";
-import { Select, Breadcrumb } from "antd";
+import { Row, Col, Select, Breadcrumb } from "antd";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faEye } from "@fortawesome/free-solid-svg-icons";
