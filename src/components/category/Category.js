@@ -1,17 +1,15 @@
 import CateStyle from './Category.module.scss';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 
-import { Avatar, List, Card, InputNumber, Button } from 'antd';
-import { Badge } from 'antd';
+import { Avatar, List, Card, InputNumber, Button, Badge } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons'
 
 import VirtualList from 'rc-virtual-list';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { useContext } from 'react';
 import itemContext from '../../pages/Shop/Shop';
 
 
