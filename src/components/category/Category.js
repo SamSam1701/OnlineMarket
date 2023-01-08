@@ -28,8 +28,9 @@ function Category({ newItems }) {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getItems = () => {
-    if (newItems.length === 0) {
-      const storageItem = JSON.parse(localStorage.getItem("items")) || null
+    if (newItems?.length === 0) {
+      console.log(newItems)
+      const storageItem = localStorage.getItem("items") !== 'undefined' ? JSON.parse(localStorage.getItem("items")) : null
       if (storageItem) {
         setItems(storageItem)
       } else {
@@ -70,7 +71,7 @@ function Category({ newItems }) {
   }
 
   useEffect(() => {
-    if (newItems.length > 0) {
+    if (newItems?.length > 0) {
       setItems(newItems)
     }
   }, [newItems]);
@@ -98,7 +99,7 @@ function Category({ newItems }) {
     <Card
       className={CateStyle.cartContainer}
       title={
-        <Badge count={items.length}>
+        <Badge count={items?.length}>
           <FontAwesomeIcon style={{ fontSize: '50px', color: '#DEECEC' }} icon={faCartShopping} />
         </Badge>}
       style={{
