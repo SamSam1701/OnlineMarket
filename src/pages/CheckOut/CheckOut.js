@@ -69,40 +69,59 @@ const CheckOut = () => {
                                       <input type="email" className={CheckOutStyle.FormControl} id="email" value="user@gmail.vn" placeholder=""/>
                                         <div className={CheckOutStyle.InvalidFeedback}> Please enter a valid email address for shipping updates. </div>
                                     </div>
-                                    <div style={{marginBottom: '16px'}}>
-                                        <label for="address">Địa chỉ*</label>
-                                        <input type="text" className={CheckOutStyle.FormControl} id="address" value='Viet nam' required/>
-                                        <div className={CheckOutStyle.InvalidFeedback}> Please enter your shipping address. </div>
-                                    </div>
-                                    <div style={{marginBottom: '16px'}}>
-                                        <label for="address2">Địa chỉ phụ </label>
-                                        <input type="text" className={CheckOutStyle.FormControl} id="address2" placeholder=""/>
-                                    </div>
-                
-                                        <Row style={{margin:'0 -15px', display:'flex', flexWrap:'wrap'}}>
-                                            <Col md={10} style={{marginBottom:'16px', position:'relative', width:'100%', minHeight:'1px', padding:'0 15px', flex:'0 0 41.666667%', maxWidth:'41.666667%'}}>
-                                            <label for="country">Quốc gia *</label>
-                                            <select style={{minHeight:'40px', border:'1px solid #e8e8e8', width:'100%'}} value="VN" id="country">
-                                                <option style={{minHeight:'40px'}} value="Choose..." data-display="Select">Chọn...</option>
-                                                <option style={{minHeight:'40px'}} value="VN">Việt Nam</option>
-                                                    </select>
-                                            <div className={CheckOutStyle.InvalidFeedback}> Please select a valid country. </div>
-                                            </Col>
-                
-                                            <Col md={8} style={{marginBottom:'16px', position:'relative', width:'100%', minHeight:'1px', padding:'0 15px', flex:'0 0 33.333333%;', maxWidth:'33.333333%;'}}>
-                                            <label for="state">Tỉnh *</label>
-                                            <select style={{minHeight:'40px', border:'1px solid #e8e8e8', width:'100%'}} value="HCM" id="state">
-                                                <option style={{minHeight:'40px'}} data-display="Select">Chọn...</option>
-                                                <option style={{ minHeight: '40px' }} value="HCM">Thành Phố Hồ Chí Minh</option>
-                                                    </select>
-                                            <div className={CheckOutStyle.InvalidFeedback}> Please provide a valid state. </div>
-                                            </Col>
-                                            <Col md={6} style={{marginBottom:'16px', position:'relative', width:'100%', minHeight:'1px', padding:'0 15px', flex:'0 0 25%', maxWidth:'25%'}}>
-                                            <label for="zip">Mã vùng *</label>
-                                            <input type="text" className={CheckOutStyle.FormControl} value="70000" id="zip" required/>
-                                            <div className={CheckOutStyle.InvalidFeedback}> Zip code required. </div>
-                                            </Col>
-                                        </Row>
+                                  <Row style={{ margin: '0 -15px', display: 'flex', flexWrap: 'wrap' }}>
+                                      <Col md={8} style={{ marginBottom: '16px', position: 'relative', width: '100%', minHeight: '1px', padding: '0 15px', flex: '0 0 33.333333%;', maxWidth: '33.333333%;' }}>
+                                          <label for="state">Tỉnh *</label>
+                                          <select style={{ minHeight: '40px', border: '1px solid #e8e8e8', width: '100%' }} defaultValue="HCM" id="state">
+                                              <option style={{ minHeight: '40px' }} data-display="Select">Chọn...</option>
+                                              <option style={{ minHeight: '40px' }} value="HCM">Thành Phố Hồ Chí Minh</option>
+                                              <option style={{ minHeight: '40px' }} value="H2">Thành Phố Hà Nội</option>
+                                          </select>
+                                          <div className={CheckOutStyle.InvalidFeedback}> Please provide a valid state. </div>
+                                      </Col>
+                                      <Col md={8} style={{ marginBottom: '16px', position: 'relative', width: '100%', minHeight: '1px', padding: '0 15px', flex: '0 0 33.333333%;', maxWidth: '33.333333%;' }}>
+                                          <label for="state">Quận</label>
+                                          <select style={{ minHeight: '40px', border: '1px solid #e8e8e8', width: '100%' }} defaultValue="1" id="state">
+                                              <option style={{ minHeight: '40px' }} data-display="Select">Chọn...</option>
+                                              <option style={{ minHeight: '40px' }} value="1">Tân Bình</option>
+                                              <option style={{ minHeight: '40px' }} value="2">Tân Phú</option>
+                                              <option style={{ minHeight: '40px' }} value="3">Quận 1</option>
+                                              <option style={{ minHeight: '40px' }} value="4">Quận 2</option>s
+                                          </select>
+                                          <div className={CheckOutStyle.InvalidFeedback}> Please provide a valid state. </div>
+                                      </Col>
+                                      <Col md={8} style={{ marginBottom: '16px', position: 'relative', width: '100%', minHeight: '1px', padding: '0 15px', flex: '0 0 33.333333%;', maxWidth: '33.333333%;' }}>
+                                          <label for="state">Huyện</label>
+                                          <select style={{ minHeight: '40px', border: '1px solid #e8e8e8', width: '100%' }} defaultValue="1" id="state">
+                                              <option style={{ minHeight: '40px' }} data-display="Select">Chọn...</option>
+                                              <option style={{ minHeight: '40px' }} value="1">Tân Thời Hoà</option>
+                                              <option style={{ minHeight: '40px' }} value="1">Tân Sơn Nhì</option>
+                                              <option style={{ minHeight: '40px' }} value="1">Tây Thạnh</option>
+                                          </select>
+                                          <div className={CheckOutStyle.InvalidFeedback}> Please provide a valid state. </div>
+                                      </Col>
+                                  </Row>
+                                  <Row style={{ margin: '0 -15px', display: 'flex', flexWrap: 'wrap' }}>
+                                  <Col md={8} style={{ marginBottom: '16px', position: 'relative', width: '100%', minHeight: '1px', padding: '0 15px', flex: '0 0 33.333333%;', maxWidth: '33.333333%;' }}>
+                                      <div style={{ marginBottom: '16px' }}>
+                                          <label for="address">Số nhà</label>
+                                          <input type="text" className={CheckOutStyle.FormControl} id="address" defaultValue="28" required />
+                                          <div className={CheckOutStyle.InvalidFeedback}> Please enter your shipping address. </div>
+                                      </div>
+                                  </Col>
+
+                                    <Col md={16} style={{ marginBottom: '16px', position: 'relative', width: '100%', minHeight: '1px', padding: '0 15px', flex: '0 0 33.333333%;', maxWidth: '33.333333%;' }}>
+                                        <label for="state">Đường</label>
+                                          <select style={{ minHeight: '40px', border: '1px solid #e8e8e8', width: '100%' }} defaultValue="1" id="state">
+                                            <option style={{ minHeight: '40px' }} data-display="Select">Chọn...</option>
+                                            <option style={{ minHeight: '40px' }} value="1">Đường Tây Sơn</option>
+                                            <option style={{ minHeight: '40px' }} value="2">Đường 3/2</option>
+                                            <option style={{ minHeight: '40px' }} value="3">Đường Nguyễn Suý</option>
+                                        </select>
+                                        <div className={CheckOutStyle.InvalidFeedback}> Please provide a valid state. </div>
+                                    </Col>
+                                  </Row>
+                                 
                                     <hr style={{marginTop:'16px',marginBottom: '24px', borderTop:'1px solid rgba(0,0,0,.1'}}/>
 
                                     <div className={CheckOutStyle.CustomControl+' '+CheckOutStyle.CustomCheckbox}>

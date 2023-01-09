@@ -57,6 +57,11 @@ function Slide() {
 
       <div className={SlideStyle.container}>
         <div>
+          <h1>
+            <strong>
+              Welcome To <br /> Freshshop
+            </strong>
+          </h1>
           <div>
             <p>
              Trải nghiệm bữa ăn sạch{" "}
