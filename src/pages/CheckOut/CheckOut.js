@@ -4,9 +4,7 @@ import ShopStyle from "../Shop/Shop.module.scss";
 
 import Subnav from "../../components/Subnav/Subnav";
 import Header from "../../components/Header/Header";
-import Slide from "../../components/Slide/Slide";
 import Footer from "../../components/Footer/Footer";
-import Category from "../../components/category/Category";
 import { Link } from "react-router-dom";
 
 import { Row, Col, Breadcrumb } from "antd";
@@ -55,59 +53,53 @@ const CheckOut = () => {
                 
                                             <Col md={12} style={{marginBottom:'16px', position:'relative', width:'100%', minHeight:'1px', padding:'0 15px'}}>
                                                 <label for="firstName">Tên riêng *</label>
-                                                <input type="text" className={CheckOutStyle.FormControl} id="firstName" value="" required/>
+                                                <input type="text" className={CheckOutStyle.FormControl} id="firstName" value="User" required/>
                                                 <div className={CheckOutStyle.InvalidFeedback}> Valid first name is required. </div>
                                             </Col>
                                             <Col md={12} style={{marginBottom:'16px', position:'relative', width:'100%', minHeight:'1px', padding:'0 15px'}}>
                                                 <label for="lastName">Tên họ *</label>
-                                                <input type="text" className={CheckOutStyle.FormControl} id="lastName" value="" required/>
+                                                <input type="text" className={CheckOutStyle.FormControl} id="lastName" value="A" required/>
                                                 <div className={CheckOutStyle.InvalidFeedback}> Valid last name is required. </div>
                                             </Col>
                 
                                     </Row>
-                                    <div style={{marginBottom: '16px'}}>
-                                        <label for="username">Tên đăng nhập *</label>
-                                        <div className={CheckOutStyle.InputGroup}>
-                                            <input type="text" className={CheckOutStyle.FormControl} id="username" required/>
-                                            <div className={CheckOutStyle.InvalidFeedback} style={{width:'100%'}}> Your username is required. </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div style={{marginBottom: '16px'}}>
                                         <label for="email">Địa chỉ Email *</label>
-                                        <input type="email" className={CheckOutStyle.FormControl} id="email" placeholder=""/>
+                                      <input type="email" className={CheckOutStyle.FormControl} id="email" value="user@gmail.vn" placeholder=""/>
                                         <div className={CheckOutStyle.InvalidFeedback}> Please enter a valid email address for shipping updates. </div>
                                     </div>
                                     <div style={{marginBottom: '16px'}}>
-                                        <label for="address">Địa chỉ gốc *</label>
-                                        <input type="text" className={CheckOutStyle.FormControl} id="address" required/>
+                                        <label for="address">Địa chỉ*</label>
+                                        <input type="text" className={CheckOutStyle.FormControl} id="address" value='Viet nam' required/>
                                         <div className={CheckOutStyle.InvalidFeedback}> Please enter your shipping address. </div>
                                     </div>
                                     <div style={{marginBottom: '16px'}}>
-                                        <label for="address2">Địa chỉ phụ *</label>
+                                        <label for="address2">Địa chỉ phụ </label>
                                         <input type="text" className={CheckOutStyle.FormControl} id="address2" placeholder=""/>
                                     </div>
                 
                                         <Row style={{margin:'0 -15px', display:'flex', flexWrap:'wrap'}}>
                                             <Col md={10} style={{marginBottom:'16px', position:'relative', width:'100%', minHeight:'1px', padding:'0 15px', flex:'0 0 41.666667%', maxWidth:'41.666667%'}}>
                                             <label for="country">Quốc gia *</label>
-                                            <select style={{minHeight:'40px', border:'1px solid #e8e8e8', width:'100%'}} id="country">
+                                            <select style={{minHeight:'40px', border:'1px solid #e8e8e8', width:'100%'}} value="VN" id="country">
                                                 <option style={{minHeight:'40px'}} value="Choose..." data-display="Select">Chọn...</option>
-                                                <option style={{minHeight:'40px'}} value="United States">Việt Nam</option>
+                                                <option style={{minHeight:'40px'}} value="VN">Việt Nam</option>
                                                     </select>
                                             <div className={CheckOutStyle.InvalidFeedback}> Please select a valid country. </div>
                                             </Col>
                 
                                             <Col md={8} style={{marginBottom:'16px', position:'relative', width:'100%', minHeight:'1px', padding:'0 15px', flex:'0 0 33.333333%;', maxWidth:'33.333333%;'}}>
                                             <label for="state">Tỉnh *</label>
-                                            <select style={{minHeight:'40px', border:'1px solid #e8e8e8', width:'100%'}} id="state">
+                                            <select style={{minHeight:'40px', border:'1px solid #e8e8e8', width:'100%'}} value="HCM" id="state">
                                                 <option style={{minHeight:'40px'}} data-display="Select">Chọn...</option>
-                                                <option style={{minHeight:'40px'}} >Thành Phố Hồ Chí Minh</option>
+                                                <option style={{ minHeight: '40px' }} value="HCM">Thành Phố Hồ Chí Minh</option>
                                                     </select>
                                             <div className={CheckOutStyle.InvalidFeedback}> Please provide a valid state. </div>
                                             </Col>
                                             <Col md={6} style={{marginBottom:'16px', position:'relative', width:'100%', minHeight:'1px', padding:'0 15px', flex:'0 0 25%', maxWidth:'25%'}}>
                                             <label for="zip">Mã vùng *</label>
-                                            <input type="text" className={CheckOutStyle.FormControl} id="zip" required/>
+                                            <input type="text" className={CheckOutStyle.FormControl} value="70000" id="zip" required/>
                                             <div className={CheckOutStyle.InvalidFeedback}> Zip code required. </div>
                                             </Col>
                                         </Row>
@@ -239,10 +231,6 @@ const CheckOut = () => {
                                         <div style={{display:'flex'}}>
                                             <h4 style={{fontSize:'16px', padding:'0px', lineHeight:'35px'}}>Phiếu giảm giá</h4>
                                             <div style={{fontWeight:'700', marginLeft:'auto', fontSize:'18px'}}>100.000đ </div>
-                                        </div>
-                                        <div style={{display:'flex'}}>
-                                            <h4 style={{fontSize:'16px', padding:'0px', lineHeight:'35px'}}>Thuế</h4>
-                                            <div style={{fontWeight:'700', marginLeft:'auto', fontSize:'18px'}}>40.000đ</div>
                                         </div>
                                         <div style={{display:'flex'}}>
                                             <h4 style={{fontSize:'16px', padding:'0px', lineHeight:'35px'}}>Chi phí vận chuyển</h4>

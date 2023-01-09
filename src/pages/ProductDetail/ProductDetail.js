@@ -8,21 +8,17 @@ import Footer from "../../components/Footer/Footer";
 import Category from "../../components/category/Category";
 
 import { Link } from "react-router-dom";
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleLeft,
   faAngleRight,
   faCartPlus,
   faEye,
+  faCaretDown
 } from "@fortawesome/free-solid-svg-icons";
-import { Carousel } from "antd"
-import { useRef } from "react";
-
-import { InputNumber, Breadcrumb, Input, Row, Col, Modal, Button } from "antd";
+import { Carousel, InputNumber, Breadcrumb, Input, Row, Col, Modal, Button } from "antd"
 import { CommentOutlined, DeleteOutlined } from "@ant-design/icons";
-import React from "react";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 function ProductDetail() {
   const ref = useRef();
   const [display_market, setDisplay] = useState(true)
