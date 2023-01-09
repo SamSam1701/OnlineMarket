@@ -175,7 +175,7 @@ function Shop() {
                 <div className={HomeStyle.container}>
                   <Row gutter={[24, 16]}>
                     {productItems.map((item) => (
-                      <Col key={item.id} lg={8} md={8} sm={24} xs={24}>
+                      <Col key={item.id} lg={8} md={8} sm={12} xs={12}>
                         <div className={HomeStyle.shopCatBox}>
                           <img src={item.img} alt="" />
 
@@ -231,7 +231,7 @@ function Shop() {
             </div>
           </Col>
 
-          <Col lg={4} md={24} sm={24}>
+          <Col lg={4} md={12} sx={24} xs={24}>
             <Producttype />
           </Col>
         </Row>

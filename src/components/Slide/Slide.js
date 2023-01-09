@@ -58,18 +58,13 @@ function Slide() {
       <div className={SlideStyle.container}>
         <div>
           <div>
-            <h1>
-              <strong>
-                Welcome To <br /> Freshshop
-              </strong>
-            </h1>
             <p>
              Trải nghiệm bữa ăn sạch{" "}
               tươi ngon giàu dinh dưỡng.
             </p>
 
             <div className={SlideStyle.Shopbtn}>
-                <Link style={{color:'white'}} to="/shop">
+                <Link style={{color:'white', margin: 10}} to="/shop">
                   Mua Ngay
                            </Link>
             </div>
@@ -90,6 +85,7 @@ function Slide() {
         </Button>
 
         <Button
+          style={{margin: 10}}
           className={SlideStyle.right}
           onClick={() => {
             ref.current.next();

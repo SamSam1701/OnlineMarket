@@ -67,11 +67,9 @@ function Home() {
         <div className={HomeStyle.categoriesShop}>
             <div className={HomeStyle.container}>
                 <Row gutter={[24, 16]}>
-
-
                 {category.map((type)=>(
              
-                      <Col key={type.id} lg={8} md={8} sm ={24} xs={24} >
+                      <Col key={type.id} lg={8} md={8} sm ={12} xs={12} >
                         <div className={HomeStyle.shopCatBox}>
                             <img
                             src={type.profilePicture}
